@@ -62,8 +62,16 @@ ul {
     align-items: center;
     padding: 0px;
     width: 100%;
-
 }
+
+
+.responsiveNav {
+    display: none;
+    width: min-content;
+    padding: 0px;
+    margin: 0px;
+}
+
 
 .profile {
     display: flex;
@@ -72,7 +80,9 @@ ul {
     align-items: center;
     padding: 0px;
     gap: 8px;
+
 }
+
 
 .headerRow2 {
     display: flex;
@@ -137,7 +147,6 @@ ul {
     gap: 12px;
     width: 100%;
     height: 100%;
-
 }
 
 .itemBody {
@@ -182,6 +191,7 @@ ul {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
     gap: 1rem;
     width: 100%;
+    height: 100%;
 }
 
 .requiredHeader {
@@ -198,6 +208,7 @@ ul {
     padding: 0px;
     gap: 8px;
     width: 100%;
+    height: 100%;
 
 }
 
@@ -209,19 +220,20 @@ ul {
     border-radius: 8px;
     padding: 12px 12px;
     width: 100%;
-
 }
 
 .cardContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
     gap: 4px;
+    padding: 0px;
     height: 100px;
+    width: 100%;
 }
 
-.cardContainer h5 {
+.cardContainer h5,
+p {
     width: 100%;
     height: 100%;
 }
@@ -354,4 +366,54 @@ ul {
     align-items: center;
     padding: 0px;
     gap: 8px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1090px) {
+
+    /* Header */
+    .headerRow1 {
+        display: flex;
+        padding: 4px 16px;
+    }
+
+    .headerRow2 {
+        display: none;
+    }
+
+    .responsiveNav {
+        display: unset;
+    }
+
+    .userName {
+        display: none;
+    }
+
+    .iconProfile {
+        display: none;
+    }
+
+    /* Home*/
+    .home {
+        padding: 16px 16px;
+        gap: 16px;
+    }
+
+    /* Overview */
+    .overview {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* Row2 */
+    .row2 {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .col1 {
+        width: 100%;
+    }
 }
