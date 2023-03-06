@@ -11,35 +11,23 @@ body {
     width: 100%;
 }
 
+/*=================================================================================================
+Header/Navbar
+=================================================================================================*/
 
-dl,
-ol,
-ul {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* Header */
-
-.bg-header {
+header {
     background-color: white;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.first,
-.second {
-    padding: 4px 0px;
+.navigation {
+    border-top: 1px solid #E0E6E6;
 }
 
-/* Home */
-
-.home {
-    padding: 0.5rem 0rem;
-}
-
-/* Overview */
-.overview {
-    padding: 1rem;
+.navigation .navbar,
+.navBody {
+    padding: 0;
+    margin: 0;
 }
 
 /*=================================================================================================
@@ -48,7 +36,6 @@ Cards
 
 .card {
     background-color: white;
-    padding: 12px;
     border-radius: 0.5rem;
     border: none;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
@@ -59,6 +46,7 @@ Cards
 .card .card {
     box-shadow: none;
     border: 1px solid rgba(0, 0, 0, .1);
+
 }
 
 .card-header {
@@ -67,14 +55,13 @@ Cards
     align-items: center;
     background: transparent;
     border: none;
+
     padding-bottom: 0;
     padding-top: 1rem;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.card-header h4 {
+    margin: 0;
 }
 
 
@@ -83,19 +70,29 @@ Cards
     margin: 0px;
 }
 
-.card-text {
-    width: 100%;
-}
-
-.list-group-icon {
+.card-body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.list-group-item i {
-    max-width: auto;
-    flex: 1 1 1.25rem;
+.card-text {
+    width: 100%;
+}
+
+.card-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.card-badge {
+    padding: 0;
+    margin: 0;
+}
+
+.list-group {
+    gap: .5rem;
 }
 
 .list-group-icon .list-group-item {
@@ -105,4 +102,52 @@ Cards
     display: flex;
     gap: 0.5rem;
     overflow: hidden;
+}
+
+/*=================================================================================================
+Card/Card-Overview
+=================================================================================================*/
+
+.card-overview {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-overview .card-icon {
+
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+}
+
+.card-overview .card-body {
+
+    gap: 0;
+
+}
+
+/*=================================================================================================
+Card/Card-Jobs
+=================================================================================================*/
+
+.card-jobs .card-body .list-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+/*=================================================================================================
+Home
+=================================================================================================*/
+
+
+.home {
+    padding: 1.5rem 0rem;
+
+}
+
+.home .container>.row+.row {
+    margin-top: 1.5rem;
 }
