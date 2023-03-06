@@ -16,14 +16,6 @@ p {
     margin: 0px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    padding: 0px;
-    margin: 0px;
-}
 
 dl,
 ol,
@@ -35,385 +27,82 @@ ul {
 /* Header */
 
 .bg-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     background-color: white;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-
 }
 
-.headerRow1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #E0E6E6;
-    padding: 4px 160px;
-    width: 100%;
-    height: 48px;
+.first,
+.second {
+    padding: 4px 0px;
 }
 
-.headerContainer1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    width: 100%;
-}
+/* Home */
 
-
-.responsiveNav {
-    display: none;
-    width: min-content;
-    padding: 0px;
-    margin: 0px;
-}
-
-
-.profile {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0px;
-    gap: 8px;
-
-}
-
-
-.headerRow2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 4px 160px;
-    gap: 8px;
-    width: 100%;
-    height: 48px;
-}
-
-.headerContainer2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 8px;
-    width: 100%;
-    height: 48 px;
-}
-
-/* Home*/
 .home {
-    padding: 32px 160px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-}
-
-/* Row1 */
-.row1 {
-    width: 100%;
-    height: 100%;
-    display: flex;
+    padding: 0.5rem 0rem;
 }
 
 /* Overview */
 .overview {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
-    gap: 24px;
-    width: 100%;
-
+    padding: 1rem;
 }
 
-.overviewItem {
+/*=================================================================================================
+Cards
+=================================================================================================*/
+
+.card {
     background-color: white;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 0.5rem;
+    border: none;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
     width: 100%;
+
 }
 
-.itemContainer {
+.card .card {
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.card-header {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 12px;
-    width: 100%;
-    height: 100%;
-}
-
-.itemBody {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-/* Row2 */
-.row2 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    width: 100%;
-}
-
-/* Col1 */
-.col1 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    width: 301px;
-}
-
-/* Action Required Section  */
-
-.actionRequired {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
-    padding: 12px 12px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
-    gap: 1rem;
-    width: 100%;
-    height: 100%;
-}
-
-.requiredHeader {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-}
-
-
-.requiredCandidates {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 100%;
-    height: 100%;
-
-}
-
-/* Action Required Card */
-
-.actionRequiredCard {
-    box-sizing: border-box;
-    border: 1px solid #E0E6E6;
-    border-radius: 8px;
-    padding: 12px 12px;
-    width: 100%;
-}
-
-.cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    padding: 0px;
-    height: 100px;
-    width: 100%;
-}
-
-.cardContainer h5,
-p {
-    width: 100%;
-    height: 100%;
-}
-
-.cardHeader {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 4px;
-    width: 100%;
-}
-
-
-.cardBody {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    width: 100%;
-}
-
-.cardItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 8px;
-
-    width: 100%;
-    height: 24px;
-}
-
-/* Col2 */
-.col2 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    width: 100%;
-}
-
-/* Latest Jobs Section */
-.latestJobs {
-    background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
-    border-radius: 8px;
-    padding: 12px;
-    width: 100%;
-}
-
-.latestJobsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-}
-
-.jobsHeader {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 0px;
-    width: 100%;
+    background: transparent;
+    border: none;
+    padding-bottom: 0;
+    padding-top: 1rem;
 }
 
-
-.jobsContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 4px;
-    width: 100%;
-}
-
-/* Latest Jobs Scroll */
-
-
-/* Jobs */
-.jobs {
+.card-body {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+
+.card-title {
     padding: 0px;
-    gap: 8px;
-    width: 100%;
-
+    margin: 0px;
 }
 
-/* Job Card */
-.jobCard {
-    box-sizing: border-box;
-    padding: 12px;
-    border: 1px solid #E0E6E6;
-    border-radius: 8px;
-    width: 100%;
-}
-
-.jobCardContainer {
+.list-group-icon {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 4px;
-    width: 100%;
+    gap: 0.5rem;
 }
 
-.jobCardContainer p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
+.list-group-item i {
+    flex-basis: 1.25rem;
 }
 
-.jobInfo {
+.list-group-icon .list-group-item {
+    padding: 0;
+    border: none;
+    border-radius: 0;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 100%;
-}
-
-.infoItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 8px;
-}
-
-
-
-/* Responsive */
-@media (max-width: 1090px) {
-
-    /* Header */
-    .headerRow1 {
-        display: flex;
-        padding: 4px 16px;
-    }
-
-    .headerRow2 {
-        display: none;
-    }
-
-    .responsiveNav {
-        display: unset;
-    }
-
-    .userName {
-        display: none;
-    }
-
-    .iconProfile {
-        display: none;
-    }
-
-    /* Home*/
-    .home {
-        padding: 16px 16px;
-        gap: 16px;
-    }
-
-    /* Overview */
-    .overview {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    /* Row2 */
-    .row2 {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .col1 {
-        width: 100%;
-    }
+    gap: 0.5rem;
+    overflow: hidden;
 }
