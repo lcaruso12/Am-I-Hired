@@ -11,11 +11,6 @@ body {
     width: 100%;
 }
 
-p {
-    padding: 0px;
-    margin: 0px;
-}
-
 
 dl,
 ol,
@@ -88,6 +83,10 @@ Cards
     margin: 0px;
 }
 
+.card-text {
+    width: 100%;
+}
+
 .list-group-icon {
     display: flex;
     flex-direction: column;
@@ -95,7 +94,8 @@ Cards
 }
 
 .list-group-item i {
-    flex-basis: 1.25rem;
+    max-width: auto;
+    flex: 1 1 1.25rem;
 }
 
 .list-group-icon .list-group-item {
