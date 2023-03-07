@@ -181,3 +181,12 @@ Jobs
     flex-direction: column;
     gap: 1rem;
 }
+
+.nav {
+    width: 100%;
+
+}
+
+.nav button {
+    width: 100%;
+}
