@@ -109,6 +109,11 @@ Cards
   flex-direction: column;
   gap: 0.5rem;
 }
+.card .card-body .btn {
+  padding: 0.25rem;
+  border: none;
+  color: black;
+}
 .card .card-text {
   width: 100%;
 }
@@ -188,6 +193,7 @@ Cards
   left: 1rem;
 }
 .card.card-jobs .btn {
+  padding: 0.25rem;
   border: none;
   color: black;
 }
