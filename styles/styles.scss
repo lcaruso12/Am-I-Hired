@@ -45,43 +45,56 @@ header {
 Page Header
 =================================================================================================*/
 
-.breadcrumb {
-    margin-bottom: 0.25rem;
-}
+
 
 .page-header {
     padding: 1rem 0;
     background: white;
     border-bottom: 1px solid rgba(33, 37, 41, 0.25);
     box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.05);
+
+    .breadcrumb {
+        margin-bottom: 0.25rem;
+    }
+    .header-container{
+
+        .header-info{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            .header-title {
+                
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                width: 100%;
+                h4 {
+                     margin: 0;
+                }
+            }   
+            .actions {
+                display: flex;
+                gap: .5rem;
+                
+                .contextual-menu{
+
+                    .btn{
+                    border: none;
+                    color:black;
+                    }
+
+                }
+                    }
+        
+        } 
+        
+    }
+    
 }
 
-.header-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.header-info{
-
-    .actions {
-        display: flex;
-        gap: 0.25rem;
-    }
-
-} 
-
-.header-info{
-
-    .header-title {
-        display: flex;
-        gap: 0.5rem;
-        width: 100%;
-        h4 {
-             margin: 0;
-        }
-    }
-} 
 
 /*=================================================================================================
 Cards
@@ -100,35 +113,36 @@ Cards
     }
 
     .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    border: none;
+        padding-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        border: none;
 
-    padding-bottom: 0;
-    padding-top: 1rem;
-    
-    h4 {
-        margin: 0;
-    }
+        h1, h2, h3, h4, h5{
+            margin: 0;
+        }
+
+        
+
+        .actions{
+            display: flex;
+            gap: .5rem;
+        }
+
     }
 
-    .card-title {
-        padding: 0px;
-        margin: 0px;
-    }
+   
 
     .card-body {
+        padding: .5rem 1rem;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-
-        .btn{
-            padding: .25rem;
-            border: none;
-            color: black;
-            }
+        .card-title{
+            margin: 0;
+        }
     }
 
     .card-text {
@@ -138,16 +152,9 @@ Cards
     .card-icon {
         width: 1.25rem;
         height: 1.25rem;
+
         flex-shrink: 0;
     }
-
-    .card-badge {
-        padding: 0;
-        margin: 0;
-
-    }
-
-
     .list-group-icon {
 
         .list-group-item {
@@ -186,6 +193,7 @@ Cards
             .list-group {
             display: flex;
             flex-direction: row;
+           
             gap: 2rem;
 
             .list-group-item {
@@ -222,8 +230,10 @@ Cards
 
         }
 
-            .contextual-menu {
+            .actions {
                     position: absolute;
+                    display: flex;
+                    gap: .5rem;
                     top: 1rem;
                     right: 1rem;
                 }
@@ -243,18 +253,69 @@ Cards
 
     }
 
+    .contextual-menu{
+
+        .btn{
+            padding: 0.5rem;
+            border: none;
+            color: black;
+            }
+
+    }
+
+    .card-action{
+        padding:1.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        .btn{
+            width: 100%;
+         }
+        .btn-primary{
+            color: var(--bs-white);
+            width: 100%;
+        }
+
+    }
 
 }
+
+.card-badge {
+        padding: 0;
+        margin: 0;
+    }
+
+/*=================================================================================================
+dropdown
+=================================================================================================*/
+
+.dropdown-item{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+   
+}
+
 
 /*=================================================================================================
 button
 =================================================================================================*/
+:root{
+    --bs-btn-hover-color: white !important;
+    --bs-btn-active-color: white !important;
+}
 .btn{
 
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: .25rem;
-   
+
+    &.btn-primary{
+    color: var(--bs-white);
+   }
 
     i{
        color: inherit;
@@ -339,17 +400,7 @@ Jobs
         flex-direction: column;
         gap: 1rem;
     }
-    
- 
-    
-    .nav {
 
-        button {
-            width: 100%;
-            color: white;
-        }
-
-    } 
     
     .input-group {
         width: 60%;
@@ -361,14 +412,99 @@ Jobs
 /*=================================================================================================
 Jobs/Details
 =================================================================================================*/
-.card-job-description {
-    height: 100%;
+
+.job-description{
+
+    .card-job-description {
+        height: 100%;
+        .form-control {
+            height: 100%;
+        }
+
+    }
+    
+    
+    .description-body {
+        .card-recruiter{
+
+            .avatar {
+                transform: scale(0.5);
+            }
+
+        }
+        .job-pipeline{
+            overflow: hidden;
+            .card-body{
+                height: 700px;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                overflow: hidden;
+
+                .pipeline-step{
+                    background-color: var(--bs-light);
+                    width: 295px;
+                    border-color: var(--bs-gray-500);
+
+                    .step-header{
+                        padding: 0.5rem 1rem 0;
+                        display:flex ;
+                        justify-content: start;
+                        align-items: center;
+                        
+                        
+                        .card-icon{
+                           margin:.5rem;
+                        }
+                        h6{
+                            margin: 0;
+                        }
+                        
+                    }
+                    .step-list{
+                        padding: .5rem;
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;
+                        height: 100%;
+                        .candidate {
+                                background: var(--bs-white);
+                                border-radius: 0.5rem;
+                                border: none;
+                                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+                                width: 100%;
+    
+                                .card-body{
+                                    height: fit-content;
+                                    width: 100%;
+                                }
+                           
+
+
+                        }
+                    }
+                }
+
+                .disqualified{
+                    border-color:var(--bs-red);
+                }
+                    
+                .hired{
+                    border-color: var(--bs-primary);
+                }
+                    
+            }
+        }
+    
+    
+    }
 }
 
-.card-job-description .form-control {
-    height: 100%;
-}
 
-.description-body .avatar {
-    transform: scale(0.5);
-}
+        
+    
+
+
+   
+
+

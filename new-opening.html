@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="styles/boostrap-custom.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+
+    <title>Job Name</title>
+</head>
+
+<body>
+    <!-- Header-->
+    <header>
+
+        <div class="container">
+            <div class="row align-items-center py-1">
+                <!-- Responsive nav
+
+            <nav class=" responsiveNav col-2 col-md-4 navbar navbar-expand-lg bg-body-tertiary ">
+                <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i data-feather="menu"></i> </span>
+                </button>
+            
+              
+                <div class="navBody collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Organizations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Users</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link">Templates</a>
+                        </li>
+                    </ul>
+                </div>
+                </nav>
+                -->
+                <div class="col-5 col-md-9">
+
+                    <div class="organizationLogo">
+                        <img src="Resources/img/Logo.svg" alt="">
+                    </div>
+
+                </div>
+
+                <div class="col-5 col-md-3">
+
+                    <div class="dropdown profile-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Lucas Osherovsky </a>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item-group">
+                                <i data-feather="user"></i>
+                                <a class="dropdown-item" href="#">Profile</a>
+                            </li>
+                            <li class="dropdown-item-group">
+                                <i class="list-group-item" data-feather="log-out"></i>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="navigation">
+            <div class="container">
+                <nav class="row navbar navbar-expand-lg align-items-center ">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i data-feather="menu"></i> </span>
+                    </button>
+                    <div class="navBody collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="jobs.html">Jobs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Organizations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Users</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link">Templates</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Job-Creating-->
+
+
+    <main class="new-job">
+        <div class="container py-3 py-md-4 px-0">
+            <div class="row">
+                <div class="col-12 col-md-4">
+
+                    <div class="card-header">
+                        <h4 class="card-title">New Opening</h4>
+                    </div>
+                    <p class="card-text py-2">These candidates haven't heard from you in a while. Send them a
+                        quick
+                        note to make sure
+                        they
+                        don't
+                        forget you.</p>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Job Information</h5>
+                        </div>
+                        <div class="card-body">
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Job Position</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Recruiter</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Recruiter in Charge of the Opening</option>
+                                        <option value="1">Create New Recruiter</option>
+                                        <option value="2">Lucas Osherosvsky</option>
+                                        <option value="3">Recruiter 2</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Job Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+
+
+                                <div class="card-action">
+
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="card-icon" data-feather="save"></i>
+                                        Save Opening
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger">
+                                        <i class="card-icon" data-feather="trash-2"></i>
+                                        Discard
+                                    </button>
+
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+</body>

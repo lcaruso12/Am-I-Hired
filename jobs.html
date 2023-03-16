@@ -69,12 +69,21 @@
 
                 <div class="col-5 col-md-3 p-0">
 
-                    <div class="profile">
-                        <img class="avatar" src="Resources/img/avatar.svg" alt="">
-                        <a class="userName" href="">
-                            Lucas Osherovsky
-                        </a>
-                        <i class="card-icon" data-feather="chevron-down"></i>
+                    <div class="dropdown profile-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Lucas Osherovsky </a>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item-group">
+                                <i data-feather="user"></i>
+                                <a class="dropdown-item" href="#">Profile</a>
+                            </li>
+                            <li class="dropdown-item-group">
+                                <i class="list-group-item" data-feather="log-out"></i>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>
@@ -141,9 +150,13 @@
                         <li class="nav-item">
                             <a class="nav-link">Archive</a>
                         </li>
+                        <div class="d-grid gap-2">
 
-                        <button type="button" class="btn btn-primary mt-3">New Opening
-                        </button>
+                            <a href="/new-opening.html" class="btn btn-primary" tabindex="-1" role="button">New
+                                Opening</a>
+
+                        </div>
+
                     </ul>
 
                 </div>
@@ -154,7 +167,7 @@
                         <input type="text" class="form-control" placeholder="Search Job" aria-label="Search"
                             aria-describedby="button-addon2">
                         <button class="btn btn-outline-secondary " type="button" id="button-addon2">
-                            Button</button>
+                            Search</button>
                     </div>
 
                     <div class="jobs-body">
@@ -182,140 +195,78 @@
                                     </li>
                                 </ul>
                             </a>
-                            <div class="dropdown contextual-menu">
-
-                                <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="card-icon" data-feather="more-vertical"></i>
+                            <div class="actions">
+                                <a class="btn btn-outline-primary" data-bs-toggle="modal"
+                                    data-bs-target="#confirmation-modal">
+                                    <i class="card-icon text-danger" data-feather="trash-2"></i>
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                    <li><a class="dropdown-item" href="#">Change to Archive</a></li>
-                                    <li><a class="dropdown-item" href="#">Change to Draft</a></li>
-                                </ul>
+
+                                </button>
+                                <div class="dropdown contextual-menu">
+
+                                    <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="card-icon" data-feather="more-vertical"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        <li><a class="dropdown-item" href="#">Change to <span
+                                                    class="text-secondary">Draft</span></a></li>
+                                        <li><a class="dropdown-item" href="#">Change to Archive</a>
+                                        <li><a class="dropdown-item" href="#">Change to Closed</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
 
                             </div>
 
-                        </div>
-
-                        <div class="card card-jobs">
-
-                            <input class="form-check-input mt-0" type="checkbox" value=""
-                                aria-label="Checkbox for following text input">
-
-                            <a href="jobs-details.html" class="card-body">
-
-                                <p class="card-subtitle"> dd/mm/yyyy</p>
-                                <h5 class="card-title">Job Position</h5>
-                                <h5 class="card-badge"><span class="badge badge-ghost-secondary">Draft</span></h5>
-                                <ul class="list-group list-group-icon">
-
-                                    <li class="list-group-item">
-                                        <i class="card-icon" data-feather="users"></i>
-                                        <p class="card-text">5</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <i class="card-icon" data-feather="award"></i>
-                                        <p class="card-text">Lucas Osherovsky</p>
-                                    </li>
-                                </ul>
-                            </a>
-                            <div class="dropdown contextual-menu">
-
-                                <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="card-icon" data-feather="more-vertical"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                    <li><a class="dropdown-item" href="#">Change to Archive</a></li>
-                                    <li><a class="dropdown-item" href="#">Change to Draft</a></li>
-                                </ul>
-
-                            </div>
 
                         </div>
 
 
-                        <div class="card card-jobs">
-
-                            <input class="form-check-input mt-0" type="checkbox" value=""
-                                aria-label="Checkbox for following text input">
-
-                            <a href="jobs-details.html" class="card-body">
-
-                                <p class="card-subtitle"> dd/mm/yyyy</p>
-                                <h5 class="card-title">Job Position</h5>
-                                <h5 class="card-badge"><span class="badge badge-ghost-archive">Archive</span></h5>
-                                <ul class="list-group list-group-icon">
-
-                                    <li class="list-group-item">
-                                        <i class="card-icon" data-feather="users"></i>
-                                        <p class="card-text">5</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <i class="card-icon" data-feather="award"></i>
-                                        <p class="card-text">Lucas Osherovsky</p>
-                                    </li>
-                                </ul>
-                            </a>
-                            <div class="dropdown contextual-menu">
-
-                                <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="card-icon" data-feather="more-vertical"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                    <li><a class="dropdown-item" href="#">Change to Archive</a></li>
-                                    <li><a class="dropdown-item" href="#">Change to Draft</a></li>
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                        <div class="card card-jobs">
-
-                            <input class="form-check-input mt-0" type="checkbox" value=""
-                                aria-label="Checkbox for following text input">
-
-                            <a href="jobs-details.html" class="card-body">
-
-                                <p class="card-subtitle"> dd/mm/yyyy</p>
-                                <h5 class="card-title">Job Position</h5>
-                                <h5 class="card-badge"><span class="badge badge-ghost-closed">Closed</span></h5>
-                                <ul class="list-group list-group-icon">
-
-                                    <li class="list-group-item">
-                                        <i class="card-icon" data-feather="users"></i>
-                                        <p class="card-text">5</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <i class="card-icon" data-feather="award"></i>
-                                        <p class="card-text">Lucas Osherovsky</p>
-                                    </li>
-                                </ul>
-                            </a>
-                            <div class="dropdown contextual-menu">
-
-                                <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="card-icon" data-feather="more-vertical"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                    <li><a class="dropdown-item" href="#">Change to Archive</a></li>
-                                    <li><a class="dropdown-item" href="#">Change to Draft</a></li>
-                                </ul>
-
-                            </div>
-
-                        </div>
 
                     </div>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="confirmation-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Opening</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete <span> <b>Job Position</b></span>?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+
+                                <i class="card-icon" data-feather="x"></i>
+
+                                Cancel
+
+                            </button>
+                            <button type="button" class="btn btn-danger">
+
+                                <i class="card-icon" data-feather="trash-2"></i>
+                                Delete
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
     </main>
 
 

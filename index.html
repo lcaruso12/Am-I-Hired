@@ -70,15 +70,20 @@
 
                 <div class="col-5 col-md-3">
 
-                    <div class="dropdown profile-drowpdown">
+                    <div class="dropdown profile-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Lucas Osherovsky </a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li class="dropdown-item-group">
+                                <i data-feather="user"></i>
+                                <a class="dropdown-item" href="#">Profile</a>
+                            </li>
+                            <li class="dropdown-item-group">
+                                <i class="list-group-item" data-feather="log-out"></i>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -129,7 +134,7 @@
 
 
 
-        <div class="container">
+        <div class="container p-0">
 
             <!-- Row 1 | Overview -->
 
@@ -215,6 +220,7 @@
                                 they
                                 don't
                                 forget you.</p>
+
                             <div class="card">
 
                                 <div class="card-header">
@@ -226,7 +232,13 @@
                                             <i class="card-icon" data-feather="more-vertical"></i>
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Send Message</a></li>
+                                            <li>
+
+                                                <a class="dropdown-item" href="#">
+                                                    <i data-feather="message-square"></i>
+                                                    Send Message</a>
+
+                                            </li>
                                         </ul>
 
                                     </div>
@@ -259,7 +271,13 @@
                                             <i class="card-icon" data-feather="more-vertical"></i>
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Send Message</a></li>
+                                            <li>
+
+                                                <a class="dropdown-item" href="#">
+                                                    <i data-feather="message-square"></i>
+                                                    Send Message</a>
+
+                                            </li>
                                         </ul>
 
                                     </div>
@@ -292,7 +310,13 @@
                                             <i class="card-icon" data-feather="more-vertical"></i>
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Send Message</a></li>
+                                            <li>
+
+                                                <a class="dropdown-item" href="#">
+                                                    <i data-feather="message-square"></i>
+                                                    Send Message</a>
+
+                                            </li>
                                         </ul>
 
                                     </div>
@@ -314,7 +338,7 @@
                                 </div>
                             </div>
 
-                            <div class="card">
+                            <div class="card candidate">
 
                                 <div class="card-header">
                                     <h5 class="card-title">Candidate</h5>
@@ -325,7 +349,13 @@
                                             <i class="card-icon" data-feather="more-vertical"></i>
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Send Message</a></li>
+                                            <li>
+
+                                                <a class="dropdown-item" href="#">
+                                                    <i data-feather="message-square"></i>
+                                                    Send Message</a>
+
+                                            </li>
                                         </ul>
 
                                     </div>
@@ -358,7 +388,6 @@
                         <div class="card-header">
                             <h4>Latest Jobs</h4>
                             <button type="button" class="btn btn-outline-primary">
-                                <i class="card-icon" data-feather="briefcase"></i>
                                 View All
                             </button>
                         </div>
