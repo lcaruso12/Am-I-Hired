@@ -107,7 +107,7 @@
                                 <a class="nav-link active" href="#">Jobs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Messages</a>
+                                <a class="nav-link" href="messages.html">Messages</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Organizations</a>
@@ -173,10 +173,63 @@
                     <div class="jobs-body">
 
 
-                        <div class="card card-jobs">
+                        <div class="card card-jobs ">
 
                             <input class="form-check-input mt-0" type="checkbox" value=""
                                 aria-label="Checkbox for following text input">
+
+                            <a href="jobs-details.html" class="card-body">
+
+                                <p class="card-subtitle"> dd/mm/yyyy</p>
+                                <h5 class="card-title">Job Position</h5>
+                                <h5 class="card-badge"><span class="badge badge-ghost-primary">Active</span></h5>
+                                <ul class="list-group list-group-icon">
+
+                                    <li class="list-group-item">
+                                        <i class="card-icon" data-feather="users"></i>
+                                        <p class="card-text">5</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="card-icon" data-feather="award"></i>
+                                        <p class="card-text">Lucas Osherovsky</p>
+                                    </li>
+                                </ul>
+                            </a>
+                            <div class="actions">
+                                <a class="btn btn-outline-primary" data-bs-toggle="modal"
+                                    data-bs-target="#confirmation-modal">
+                                    <i class="card-icon text-danger" data-feather="trash-2"></i>
+                                </a>
+
+                                </button>
+                                <div class="dropdown contextual-menu">
+
+                                    <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="card-icon" data-feather="more-vertical"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        <li><a class="dropdown-item" href="#">Change to <span
+                                                    class="text-secondary">Draft</span></a></li>
+                                        <li><a class="dropdown-item" href="#">Change to Archive</a>
+                                        <li><a class="dropdown-item" href="#">Change to Closed</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="card card-jobs selected">
+
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
 
                             <a href="jobs-details.html" class="card-body">
 

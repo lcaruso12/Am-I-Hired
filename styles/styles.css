@@ -178,6 +178,9 @@ Cards
   gap: 0.5rem;
   overflow: hidden;
 }
+.card.card-jobs.selected {
+  border: solid 3px #79D3A9;
+}
 .card.card-jobs .actions {
   position: absolute;
   display: flex;
@@ -194,6 +197,57 @@ Cards
   padding: 0.25rem;
   border: none;
   color: black;
+}
+.card.card-chat {
+  padding: 1rem 1rem 1rem 3.5rem;
+}
+.card.card-chat .avatar-container {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 100%;
+}
+.card.card-chat .card-header {
+  padding: 0;
+}
+.card.card-chat .card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
+  padding: 0;
+}
+.card.card-chat .card-body .message-info {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: start;
+  align-items: end;
+}
+.card.card-chat .card-body .message-info .message-view {
+  height: 1.5rem;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+}
+.card.card-chat .card-body .message-info .time {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.card.card-chat.selected {
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+  background: var(--bs-primary);
+}
+.card.card-chat.selected .card-header {
+  color: var(--bs-white);
+}
+.card.card-chat.selected .card-text {
+  color: var(--bs-white);
 }
 .card .contextual-menu .btn {
   padding: 0.5rem;
@@ -222,6 +276,24 @@ Cards
 }
 
 /*=================================================================================================
+avatar
+=================================================================================================*/
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FECBA1;
+  border-radius: 2rem;
+}
+.avatar p {
+  color: #CA6510;
+  text-align: center;
+  margin: 0;
+}
+
+/*=================================================================================================
 dropdown
 =================================================================================================*/
 .dropdown-item {
@@ -233,11 +305,6 @@ dropdown
 /*=================================================================================================
 button
 =================================================================================================*/
-:root {
-  --bs-btn-hover-color: white !important;
-  --bs-btn-active-color: white !important;
-}
-
 .btn {
   display: flex;
   justify-content: center;
@@ -378,4 +445,136 @@ Jobs/Details
 }
 .job-description .description-body .job-pipeline .card-body .hired {
   border-color: var(--bs-primary);
+}
+
+/*=================================================================================================
+Messages
+=================================================================================================*/
+.messages .message-section {
+  overflow: hidden;
+}
+.messages .candidates-chats {
+  border-right: solid 1px var(--bs-gray-400);
+  height: 736px;
+}
+.messages .candidates-chats .chat-header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.messages .candidates-chats .chat-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.messages .chat-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  padding: 1rem;
+  border-left: solid 1px var(--bs-gray-400);
+  height: 100%;
+}
+.messages .chat-info .card-body {
+  padding: 0;
+}
+.messages .chat-info .card-body .list-group-icon {
+  gap: 1rem;
+}
+.messages .chat-info .avatar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.messages .chat-info .avatar-container .avatar {
+  height: 8.25rem;
+  width: 8.25rem;
+  border-radius: 9rem;
+}
+.messages .chat-info .avatar-container .avatar h1 {
+  color: #CA6510;
+  margin: 0;
+}
+.messages .messenger {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.messages .messenger .messenger-body {
+  padding: 1rem 1rem 0 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.messages .messenger .messenger-body .date {
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.messages .messenger .messenger-body .date p {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+.messages .messenger .messenger-body .date .divider {
+  width: 100%;
+  height: 1px;
+  background: var(--bs-gray-400);
+}
+.messages .messenger .messenger-body .card {
+  border: none;
+  padding: 0.5rem;
+}
+.messages .messenger .messenger-body .card.message-received {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 0.5rem;
+  background: #BFDBFE;
+}
+.messages .messenger .messenger-body .card.message-received p {
+  margin: 0;
+}
+.messages .messenger .messenger-body .card.message-sent {
+  margin-left: 25%;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 0.5rem;
+  background: #87F7B2;
+}
+.messages .messenger .messenger-body .card.message-sent p {
+  margin: 0;
+}
+.messages .messenger .messenger-input {
+  padding: 1rem 1rem 0 1rem;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bs-gray-100);
+  border-top: solid 1px var(--bs-gray-400);
+}
+.messages .messenger .messenger-input p {
+  width: 100%;
+  margin: 0;
+}
+.messages .messenger .messenger-input .btn {
+  width: 34px;
+  border-radius: 5rem;
 }/*# sourceMappingURL=styles.css.map */
