@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+
     <link rel="stylesheet" href="styles/boostrap-custom.css">
     <link rel="stylesheet" href="styles/styles.css">
 
 
-    <title>Job Name</title>
+    <title>My Organization</title>
+
 </head>
 
 <body>
@@ -59,7 +61,7 @@
                 -->
                 <div class="col-5 col-md-9">
 
-                    <div class="organizationLogo">
+                    <div class="">
                         <img src="Resources/img/Logo.svg" alt="">
                     </div>
 
@@ -102,13 +104,13 @@
                                 <a class="nav-link" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="jobs.html">Jobs</a>
+                                <a class="nav-link" href="jobs.html">Jobs</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="messages.html">Messages</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="my-organization.html">My Organization</a>
+                                <a class="nav-link active" href="my-organization.html">My Organization</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link">Users</a>
@@ -125,75 +127,116 @@
 
     </header>
 
-    <!-- Job-Creating-->
+    <main class="my-organization">
 
-
-    <main class="new-job">
-        <div class="container py-3 py-md-4 px-0">
+        <div class="container py-4">
             <div class="row">
-                <div class="col-12 col-md-4">
 
-                    <div class="card-header">
-                        <h4 class="card-title">New Opening</h4>
-                    </div>
-                    <p class="card-text py-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis rem,
-                        deleniti, labore modi sit amet saepe eligendi at laborum, nobis in dolor fugit! Doloribus
-                        accusantium fugit ex quia sed nisi.</p>
-                </div>
-                <div class="col-12 col-md-8">
-                    <div class="card">
+                <div class="col-12 col-md-4">
+                    <div class="card organization-records">
+
                         <div class="card-header">
-                            <h5 class="card-title">Job Information</h5>
+                            <img class="myorganization-logo" src="Resources/img/Logo.svg" alt="">
                         </div>
                         <div class="card-body">
 
-                            <form>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Job Position</label>
-                                    <input type="text" class="form-control">
-                                </div>
+                            <ul class="list-group list-group-icon">
 
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Recruiter</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Select Recruiter in Charge of the Opening</option>
-                                        <option value="1">Create New Recruiter</option>
-                                        <option value="2">Lucas Osherosvsky</option>
-                                        <option value="3">Recruiter 2</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Job Description</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
-
-
-                                <div class="card-action">
-
-                                    <button type="button" class="btn btn-primary">
-                                        <i class="card-icon" data-feather="save"></i>
-                                        Save Opening
-                                    </button>
-                                    <button type="button" class="btn btn-outline-danger">
-                                        <i class="card-icon" data-feather="trash-2"></i>
-                                        Discard
-                                    </button>
-
-                                </div>
-                            </form>
+                                <li class="list-group-item">
+                                    <h4 class="text-primary"><b>40</b></h4>
+                                    <p>Succesful Hires</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h4 class="text-primary"><b>156</b></h4>
+                                    <p>Active Candidates</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h4 class="text-primary"><b>70</b></h4>
+                                    <p>Openings</p>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#candidate-modal">
+                                <i class="card-icon" data-feather="edit-2"></i>
+                                Edit Organization
+                            </button>
 
                         </div>
 
                     </div>
-
                 </div>
-            </div>
 
+                <div class="col-12 col-md-8">
+                    <div class="card organization-info">
+
+                        <div class="card-body info">
+                            <div class="description">
+                                <label for="exampleInputEmail1" class="form-label">Description</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    rows="3"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, nostrum.
+                                Odio, dolores aliquam, maiores labore nemo ullam dolorum explicabo quae, libero vitae porro quo voluptatibus odit itaque incidunt reprehenderit.</textarea>
+                            </div>
+                            <div class="organization-admin">
+                                <h5 class="card-header">Organization Admin</h5>
+                                <div class="card-body">
+                                    <div class="avatar-container">
+                                        <div class="avatar">
+                                            <h1>LO</h1>
+                                        </div>
+
+                                    </div>
+                                    <h6 class="card-title"> Lucas Osherovsky</h6>
+
+                                    <ul class="list-group list-group-icon">
+
+                                        <li class="list-group-item">
+                                            <i class="card-icon" data-feather="mail"></i>
+                                            <p class="card-text">losherovsky@itcrowdarg.con</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="card-icon" data-feather="briefcase"></i>
+                                            <p class="card-text">IT CROWD</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="card-icon" data-feather="phone"></i>
+                                            <p class="card-text"> +541166632456</p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
 
-
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -202,3 +245,5 @@
         feather.replace()
     </script>
 </body>
+
+</html>

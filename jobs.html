@@ -110,7 +110,7 @@
                                 <a class="nav-link" href="messages.html">Messages</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Organizations</a>
+                                <a class="nav-link" href="my-organization.html">My Organization</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link">Users</a>
@@ -162,12 +162,20 @@
                 </div>
 
                 <div class="col-12 col-md-8">
+                    <div class="jobs-header mb-3">
 
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Search Job" aria-label="Search"
-                            aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary " type="button" id="button-addon2">
-                            Search</button>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search Job" aria-label="Search"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary " type="button" id="button-addon2">
+                                Search</button>
+                        </div>
+                        <div class="batch-actions">
+                            <button class="btn btn-outline-primary">Clear Selection</button>
+                            <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#batch-confirmation-modal">Delete Selection</button>
+                        </div>
+
                     </div>
 
                     <div class="jobs-body">
@@ -182,7 +190,7 @@
 
                                 <p class="card-subtitle"> dd/mm/yyyy</p>
                                 <h5 class="card-title">Job Position</h5>
-                                <h5 class="card-badge"><span class="badge badge-ghost-primary">Active</span></h5>
+                                <h5 class="card-badge"><span class="badge badge-ghost-secondary">Draft</span></h5>
                                 <ul class="list-group list-group-icon">
 
                                     <li class="list-group-item">
@@ -196,9 +204,9 @@
                                 </ul>
                             </a>
                             <div class="actions">
-                                <a class="btn btn-outline-primary" data-bs-toggle="modal"
+                                <a class="btn btn-outline-danger" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
-                                    <i class="card-icon text-danger" data-feather="trash-2"></i>
+                                    <i class="card-icon" data-feather="trash-2"></i>
                                 </a>
 
                                 </button>
@@ -210,9 +218,9 @@
                                     </a>
                                     <ul class="dropdown-menu">
 
-                                        <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+
                                         <li><a class="dropdown-item" href="#">Change to <span
-                                                    class="text-secondary">Draft</span></a></li>
+                                                    class="text-primary">Active</span></a></li>
                                         <li><a class="dropdown-item" href="#">Change to Archive</a>
                                         <li><a class="dropdown-item" href="#">Change to Closed</a>
                                         </li>
@@ -249,9 +257,9 @@
                                 </ul>
                             </a>
                             <div class="actions">
-                                <a class="btn btn-outline-primary" data-bs-toggle="modal"
+                                <a class="btn btn-outline-danger" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
-                                    <i class="card-icon text-danger" data-feather="trash-2"></i>
+                                    <i class="card-icon" data-feather="trash-2"></i>
                                 </a>
 
                                 </button>
@@ -263,7 +271,7 @@
                                     </a>
                                     <ul class="dropdown-menu">
 
-                                        <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+
                                         <li><a class="dropdown-item" href="#">Change to <span
                                                     class="text-secondary">Draft</span></a></li>
                                         <li><a class="dropdown-item" href="#">Change to Archive</a>
@@ -297,6 +305,37 @@
                         </div>
                         <div class="modal-body">
                             Are you sure you want to delete <span> <b>Job Position</b></span>?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+
+                                <i class="card-icon" data-feather="x"></i>
+
+                                Cancel
+
+                            </button>
+                            <button type="button" class="btn btn-danger">
+
+                                <i class="card-icon" data-feather="trash-2"></i>
+                                Delete
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batch Modal -->
+            <div class="modal fade" id="batch-confirmation-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Opening</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete these <span> <b>x amount positions</b></span>?
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
