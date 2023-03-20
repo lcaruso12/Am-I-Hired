@@ -73,7 +73,6 @@ Page Header
 }
 .page-header .header-container .header-info .actions .contextual-menu .btn {
   border: none;
-  color: black;
 }
 
 /*=================================================================================================
@@ -106,7 +105,8 @@ Cards
   gap: 0.5rem;
 }
 .card .card-body {
-  padding: 0.5rem 1rem;
+  width: 100%;
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -199,6 +199,59 @@ Cards
   left: 1rem;
 }
 .card.card-jobs .btn {
+  padding: 0.25rem;
+  border: none;
+  color: black;
+}
+.card.card-users {
+  display: flex;
+  flex-direction: row;
+  padding: 0 1rem 0 0;
+}
+.card.card-users .card-body {
+  gap: 0.25rem;
+}
+.card.card-users .avatar-container {
+  flex-shrink: 0;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+.card.card-users .avatar-container .avatar {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 15rem;
+}
+.card.card-users .avatar-container .avatar h3 {
+  margin: 0;
+  color: #CA6510;
+}
+.card.card-users .list-group .list-group-item {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+.card.card-users.selected {
+  border: solid 3px #79D3A9;
+}
+.card.card-users .actions {
+  position: absolute;
+  display: flex;
+  gap: 0.5rem;
+  top: 1rem;
+  right: 1rem;
+}
+.card.card-users .form-check-input {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.card.card-users .btn {
   padding: 0.25rem;
   border: none;
   color: black;
@@ -308,6 +361,14 @@ dropdown
 }
 
 /*=================================================================================================
+Paginator
+=================================================================================================*/
+.pagination {
+  display: flex;
+  justify-content: end;
+}
+
+/*=================================================================================================
 button
 =================================================================================================*/
 .btn {
@@ -317,10 +378,17 @@ button
   gap: 0.25rem;
 }
 .btn.btn-primary {
-  color: var(--bs-white);
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-hover-color:var(--bs-white);
 }
-.btn i {
+.btn.btn-outline-danger {
+  --bs-btn-hover-color:var(--bs-white);
+}
+.btn.btn-outline-danger i {
   color: inherit;
+}
+.btn.btn-outline-primary {
+  --bs-btn-hover-color:var(--bs-white);
 }
 
 /*=================================================================================================
@@ -417,8 +485,27 @@ Jobs/Details
 .job-description .card-job-description .form-control {
   height: 100%;
 }
-.job-description .description-body .card-recruiter .avatar {
-  transform: scale(0.5);
+.job-description .description-body .card-recruiter .avatar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.job-description .description-body .card-recruiter .avatar-container h3 {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+.job-description .description-body .card-recruiter .avatar-container .avatar {
+  height: 8.25rem;
+  width: 8.25rem;
+  border-radius: 9rem;
+}
+.job-description .description-body .card-recruiter .avatar-container .avatar h1 {
+  color: #CA6510;
+  margin: 0;
 }
 .job-description .description-body .job-pipeline {
   overflow: hidden;
@@ -644,4 +731,37 @@ My Organization
 .my-organization .organization-info .organization-admin .avatar-container .avatar h1 {
   color: #CA6510;
   margin: 0;
+}
+
+/*=================================================================================================
+Users
+=================================================================================================*/
+.users .users-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.users .users-header .batch-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0.5rem;
+}
+.users .users-header .batch-actions .btn {
+  width: 153px;
+}
+.users .users-header .input-group {
+  width: 100%;
+}
+.users .users-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }/*# sourceMappingURL=styles.css.map */

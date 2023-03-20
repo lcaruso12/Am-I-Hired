@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 
 
-    <title>Jobs</title>
+    <title>Users</title>
 
 </head>
 
@@ -109,7 +109,7 @@
                                 <a class="nav-link" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Jobs</a>
+                                <a class="nav-link" href="jobs.html">Jobs</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="messages.html">Messages</a>
@@ -118,7 +118,7 @@
                                 <a class="nav-link" href="my-organization.html">My Organization</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="users.html">Users</a>
+                                <a class="nav-link active" href="users.html">Users</a>
                             </li>
 
                             <li class="nav-item">
@@ -132,8 +132,8 @@
 
     </header>
 
-    <!-- Jobs-->
-    <main class="jobs">
+    <!-- Users-->
+    <main class="users">
         <div class="container px-0 py-3 py-md-4">
 
             <div class=" row m-0 m-md-0 gy-3 gx-md-4">
@@ -144,21 +144,91 @@
                             <a class="nav-link active" aria-current="page" href="#">All</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Active</a>
+                            <a class="nav-link" href="#">Admins</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Draft</a>
+                            <a class="nav-link" href="#">Recruiters</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Closed</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Archive</a>
-                        </li>
+
                         <div class="d-grid gap-2">
 
-                            <a href="/new-opening.html" class="btn btn-primary" tabindex="-1" role="button">New
-                                Opening</a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#candidate-modal">
+                                <i class="card-icon" data-feather="user-plus"></i>
+                                New User
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="candidate-modal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">New User
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">First
+                                                        Name</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Last
+                                                        Name</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                                                    <input type="email" class="form-control">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Phone
+                                                        Number</label>
+                                                    <input type="number" class="form-control">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Role</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Select User Role
+                                                        </option>
+                                                        <option value="1">Admin</option>
+                                                        <option value="2">Recruiter</option>
+
+                                                    </select>
+                                                </div>
+
+
+                                            </form>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-primary"
+                                                data-bs-dismiss="modal">
+
+                                                <i class="card-icon" data-feather="x"></i>
+
+                                                Cancel
+
+                                            </button>
+                                            <button type="button" class="btn btn-primary">
+
+                                                <i class="card-icon" data-feather="plus"></i>
+                                                Create User
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -167,7 +237,7 @@
                 </div>
 
                 <div class="col-12 col-md-8">
-                    <div class="jobs-header mb-3">
+                    <div class="users-header mb-3">
 
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search Job" aria-label="Search"
@@ -183,31 +253,43 @@
 
                     </div>
 
-                    <div class="jobs-body">
+                    <div class="users-body">
 
 
-                        <div class="card card-jobs ">
+                        <div class="card card-users">
 
                             <input class="form-check-input mt-0" type="checkbox" value=""
                                 aria-label="Checkbox for following text input">
 
-                            <a href="jobs-details.html" class="card-body">
 
-                                <p class="card-subtitle"> dd/mm/yyyy</p>
-                                <h5 class="card-title">Job Position</h5>
-                                <h5 class="card-badge"><span class="badge badge-ghost-secondary">Draft</span></h5>
+                            <div class="avatar-container">
+                                <div class="avatar">
+                                    <h3>LO</h3>
+                                </div>
+                            </div>
+
+                            <div href="jobs-details.html" class="card-body">
+
+
+
+                                <h5 class="card-title">Lucas Osherovsky</h5>
+                                <h5 class="card-badge">
+                                    <span class="badge badge-ghost-primary">Admin</span>
+                                    <i class="card-icon text-warning" data-feather="star"></i>
+                                </h5>
                                 <ul class="list-group list-group-icon">
 
                                     <li class="list-group-item">
-                                        <i class="card-icon" data-feather="users"></i>
-                                        <p class="card-text">5</p>
+                                        <i class="card-icon" data-feather="mail"></i>
+                                        <p class="card-text"><small>losherovsky@itcrowdarg.com</small></p>
                                     </li>
                                     <li class="list-group-item">
-                                        <i class="card-icon" data-feather="award"></i>
-                                        <p class="card-text">Lucas Osherovsky</p>
+                                        <i class="card-icon" data-feather="phone"></i>
+                                        <p class="card-text"><small>+541166543356</small></p>
                                     </li>
                                 </ul>
-                            </a>
+
+                            </div>
                             <div class="actions">
                                 <a class="btn btn-outline-danger" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
@@ -240,81 +322,39 @@
 
                         </div>
 
-                        <div class="card card-jobs selected">
+                        <div class="card card-users selected">
 
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
 
-                            <a href="jobs-details.html" class="card-body">
 
-                                <p class="card-subtitle"> dd/mm/yyyy</p>
-                                <h5 class="card-title">Job Position</h5>
-                                <h5 class="card-badge"><span class="badge badge-ghost-primary">Active</span></h5>
-                                <ul class="list-group list-group-icon">
-
-                                    <li class="list-group-item">
-                                        <i class="card-icon" data-feather="users"></i>
-                                        <p class="card-text">5</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <i class="card-icon" data-feather="award"></i>
-                                        <p class="card-text">Lucas Osherovsky</p>
-                                    </li>
-                                </ul>
-                            </a>
-                            <div class="actions">
-                                <a class="btn btn-outline-danger" data-bs-toggle="modal"
-                                    data-bs-target="#confirmation-modal">
-                                    <i class="card-icon" data-feather="trash-2"></i>
-                                </a>
-
-                                </button>
-                                <div class="dropdown contextual-menu">
-
-                                    <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <i class="card-icon" data-feather="more-vertical"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-
-
-                                        <li><a class="dropdown-item" href="#">Change to <span
-                                                    class="text-secondary">Draft</span></a></li>
-                                        <li><a class="dropdown-item" href="#">Change to Archive</a>
-                                        <li><a class="dropdown-item" href="#">Change to Closed</a>
-                                        </li>
-
-                                    </ul>
-
+                            <div class="avatar-container">
+                                <div class="avatar">
+                                    <h3>CG</h3>
                                 </div>
-
-
                             </div>
 
+                            <div href="jobs-details.html" class="card-body">
 
-                        </div>
 
-                        <div class="card card-jobs ">
 
-                            <input class="form-check-input mt-0" type="checkbox" value=""
-                                aria-label="Checkbox for following text input">
+                                <h5 class="card-title">Candela Gallego</h5>
+                                <h5 class="card-badge">
+                                    <span class="badge badge-ghost-primary">Admin</span>
 
-                            <a href="jobs-details.html" class="card-body">
-
-                                <p class="card-subtitle"> dd/mm/yyyy</p>
-                                <h5 class="card-title">Job Position</h5>
-                                <h5 class="card-badge"><span class="badge badge-ghost-secondary">Draft</span></h5>
+                                </h5>
                                 <ul class="list-group list-group-icon">
 
                                     <li class="list-group-item">
-                                        <i class="card-icon" data-feather="users"></i>
-                                        <p class="card-text">5</p>
+                                        <i class="card-icon" data-feather="mail"></i>
+                                        <p class="card-text"><small>cgallego@itcrowdarg.com</small></p>
                                     </li>
                                     <li class="list-group-item">
-                                        <i class="card-icon" data-feather="award"></i>
-                                        <p class="card-text">Lucas Osherovsky</p>
+                                        <i class="card-icon" data-feather="phone"></i>
+                                        <p class="card-text"><small>+541166543356</small></p>
                                     </li>
                                 </ul>
-                            </a>
+
+                            </div>
                             <div class="actions">
                                 <a class="btn btn-outline-danger" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
@@ -347,27 +387,39 @@
 
                         </div>
 
-                        <div class="card card-jobs selected">
+                        <div class="card card-users selected">
 
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
 
-                            <a href="jobs-details.html" class="card-body">
 
-                                <p class="card-subtitle"> dd/mm/yyyy</p>
-                                <h5 class="card-title">Job Position</h5>
-                                <h5 class="card-badge"><span class="badge badge-ghost-primary">Active</span></h5>
+                            <div class="avatar-container">
+                                <div class="avatar">
+                                    <h3>RR</h3>
+                                </div>
+                            </div>
+
+                            <div href="jobs-details.html" class="card-body">
+
+
+
+                                <h5 class="card-title">Recruiter</h5>
+                                <h5 class="card-badge">
+                                    <span class="badge badge-ghost-secondary">Recruiter</span>
+
+                                </h5>
                                 <ul class="list-group list-group-icon">
 
                                     <li class="list-group-item">
-                                        <i class="card-icon" data-feather="users"></i>
-                                        <p class="card-text">5</p>
+                                        <i class="card-icon" data-feather="mail"></i>
+                                        <p class="card-text"><small>losherovsky@itcrowdarg.com</small></p>
                                     </li>
                                     <li class="list-group-item">
-                                        <i class="card-icon" data-feather="award"></i>
-                                        <p class="card-text">Lucas Osherovsky</p>
+                                        <i class="card-icon" data-feather="phone"></i>
+                                        <p class="card-text"><small>+541166543356</small></p>
                                     </li>
                                 </ul>
-                            </a>
+
+                            </div>
                             <div class="actions">
                                 <a class="btn btn-outline-danger" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
@@ -385,7 +437,71 @@
 
 
                                         <li><a class="dropdown-item" href="#">Change to <span
-                                                    class="text-secondary">Draft</span></a></li>
+                                                    class="text-primary">Active</span></a></li>
+                                        <li><a class="dropdown-item" href="#">Change to Archive</a>
+                                        <li><a class="dropdown-item" href="#">Change to Closed</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="card card-users selected">
+
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+
+                            <div class="avatar-container">
+                                <div class="avatar">
+                                    <h3>RR</h3>
+                                </div>
+                            </div>
+
+                            <div href="jobs-details.html" class="card-body">
+
+
+
+                                <h5 class="card-title">Recruiter</h5>
+                                <h5 class="card-badge">
+                                    <span class="badge badge-ghost-secondary">Recruiter</span>
+
+                                </h5>
+                                <ul class="list-group list-group-icon">
+
+                                    <li class="list-group-item">
+                                        <i class="card-icon" data-feather="mail"></i>
+                                        <p class="card-text"><small>losherovsky@itcrowdarg.com</small></p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="card-icon" data-feather="phone"></i>
+                                        <p class="card-text"><small>+541166543356</small></p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-outline-danger" data-bs-toggle="modal"
+                                    data-bs-target="#confirmation-modal">
+                                    <i class="card-icon" data-feather="trash-2"></i>
+                                </a>
+
+                                </button>
+                                <div class="dropdown contextual-menu">
+
+                                    <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="card-icon" data-feather="more-vertical"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+
+                                        <li><a class="dropdown-item" href="#">Change to <span
+                                                    class="text-primary">Active</span></a></li>
                                         <li><a class="dropdown-item" href="#">Change to Archive</a>
                                         <li><a class="dropdown-item" href="#">Change to Closed</a>
                                         </li>
@@ -415,6 +531,9 @@
                                 </a>
                             </li>
                         </ul>
+
+
+
 
 
                     </div>
