@@ -159,10 +159,69 @@
                         </li>
                     </ul>
                     <div class="d-grid gap-2">
-                        <a href="/new-opening.html" class="btn btn-primary" tabindex="-1" role="button">
-                            <i class="btn-icon text-white" data-feather="plus"></i>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#candidate-modal">
+                            <i class="btn-icon" data-feather="plus"></i>
                             New Opening
-                        </a>
+                        </button>
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="candidate-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">New User
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Job Position</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Recruiter</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Select Recruiter in Charge of the Opening</option>
+                                                    <option value="1">Create New Recruiter</option>
+                                                    <option value="2">Lucas Osherosvsky</option>
+                                                    <option value="3">Recruiter 2</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Job
+                                                    Description</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+
+                                            <i class="card-icon" data-feather="x"></i>
+
+                                            Cancel
+
+                                        </button>
+                                        <button type="button" class="btn btn-primary">
+
+                                            <i class="card-icon" data-feather="plus"></i>
+                                            Create Opening
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
                     </div>

@@ -537,22 +537,7 @@ Cards
 
     }
 
-    .card-action{
-        padding:1.5rem;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.5rem;
-        .btn{
-            width: 100%;
-         }
-        .btn-primary{
-            color: var(--bs-white);
-            width: 100%;
-        }
-
-    }
+    
 
 }
 
@@ -766,7 +751,7 @@ Jobs/Details
                 overflow: hidden;
 
                 .pipeline-step{
-                    background-color: var(--bs-light);
+                    background-color: var(--bs-gray-100);
                     width: 295px;
                     border-color: var(--bs-gray-500);
 

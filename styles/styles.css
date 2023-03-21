@@ -431,21 +431,6 @@ Cards
   border: none;
   color: black;
 }
-.card .card-action {
-  padding: 1.5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.card .card-action .btn {
-  width: 100%;
-}
-.card .card-action .btn-primary {
-  color: var(--bs-white);
-  width: 100%;
-}
 
 .card-badge {
   padding: 0;
@@ -619,7 +604,7 @@ Jobs/Details
   overflow: hidden;
 }
 .job-description .description-body .job-pipeline .card-body .pipeline-step {
-  background-color: var(--bs-light);
+  background-color: var(--bs-gray-100);
   width: 295px;
   border-color: var(--bs-gray-500);
 }
