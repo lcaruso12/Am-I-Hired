@@ -136,11 +136,11 @@
 
     <!-- Jobs-->
     <main class="jobs">
-        <div class="container px-0 py-3 py-md-4">
+        <div class="container px-0  py-md-4">
 
-            <div class=" row m-0 m-md-0 gy-3 gx-md-4">
+            <div class="row m-0 m-md-0 gy-3 gx-md-4">
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4" id="mobile">
                     <ul class="nav nav-pills flex-md-column">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">All</a>
@@ -157,29 +157,28 @@
                         <li class="nav-item">
                             <a class="nav-link">Archive</a>
                         </li>
-                        <div class="d-grid gap-2">
-                            <a href="/new-opening.html" class="btn btn-primary" tabindex="-1" role="button">
-                                <i class="btn-icon text-white" data-feather="plus"></i>
-                                New Opening
-
-                            </a>
-
-
-                        </div>
-
                     </ul>
+                    <div class="d-grid gap-2">
+                        <a href="/new-opening.html" class="btn btn-primary" tabindex="-1" role="button">
+                            <i class="btn-icon text-white" data-feather="plus"></i>
+                            New Opening
+                        </a>
+
+
+                    </div>
 
                 </div>
 
                 <div class="col-12 col-md-8">
-                    <div class="listing-header mb-3">
+
+                    <div class="listing-header">
 
                         <div class="container m-0">
 
                             <div class="row">
                                 <div class="col-12 col-md-7 p-0">
 
-                                    <div class="input-group mb-3">
+                                    <div class="input-group mb-md-3">
                                         <input type="text" class="form-control" placeholder="Search"
                                             aria-label="Recipient's username" aria-describedby="button-addon2">
                                         <button class="btn btn-outline-light" type="button" id="button-addon2">
@@ -189,7 +188,7 @@
 
                                 </div>
 
-                                <div class="col-12 col-md-5 p-0">
+                                <div class="col-12 col-md-5 p-0 mb-3">
 
                                     <div class="batch-actions">
                                         <button class="btn btn-link">Clear Selection</button>
@@ -208,7 +207,6 @@
 
                     <div class="listing-body">
 
-
                         <div class="card card-jobs ">
 
                             <input class="form-check-input mt-0" type="checkbox" value=""
@@ -422,8 +420,6 @@
 
 
                         </div>
-
-
 
                         <ul class="pagination">
                             <li class="page-item">
@@ -441,6 +437,16 @@
                             </li>
                         </ul>
 
+                    </div>
+
+                    <div class="mobile">
+
+                        <div class="batch-actions">
+                            <button class="btn btn-link">Clear Selection</button>
+                            <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#batch-confirmation-modal">Delete
+                                Selection</button>
+                        </div>
 
                     </div>
                 </div>

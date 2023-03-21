@@ -136,11 +136,11 @@
 
     <!-- Users-->
     <main class="users">
-        <div class="container px-0 py-3 py-md-4">
+        <div class="container px-0  py-md-4">
 
-            <div class=" row m-0 m-md-0 gy-3 gx-md-4">
+            <div class="row m-0 m-md-0 gy-3 gx-md-4">
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4" id="mobile">
                     <ul class="nav nav-pills flex-md-column">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">All</a>
@@ -152,101 +152,101 @@
                             <a class="nav-link" href="#">Recruiters</a>
                         </li>
 
-                        <div class="d-grid gap-2">
+                    </ul>
 
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#candidate-modal">
-                                <i class="btn-icon" data-feather="user-plus"></i>
-                                New User
-                            </button>
+                    <div class="d-grid gap-2">
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="candidate-modal" tabindex="-1"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">New User
-                                            </h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#candidate-modal">
+                            <i class="btn-icon" data-feather="user-plus"></i>
+                            New User
+                        </button>
 
-                                            <form>
-                                                <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">First
-                                                        Name</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="candidate-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">New User
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
 
-                                                <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">Last
-                                                        Name</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">First
+                                                    Name</label>
+                                                <input type="text" class="form-control">
+                                            </div>
 
-                                                <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                                                    <input type="email" class="form-control">
-                                                </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Last
+                                                    Name</label>
+                                                <input type="text" class="form-control">
+                                            </div>
 
-                                                <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">Phone
-                                                        Number</label>
-                                                    <input type="number" class="form-control">
-                                                </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                                <input type="email" class="form-control">
+                                            </div>
 
-                                                <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">Role</label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected>Select User Role
-                                                        </option>
-                                                        <option value="1">Admin</option>
-                                                        <option value="2">Recruiter</option>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Phone
+                                                    Number</label>
+                                                <input type="number" class="form-control">
+                                            </div>
 
-                                                    </select>
-                                                </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Role</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Select User Role
+                                                    </option>
+                                                    <option value="1">Admin</option>
+                                                    <option value="2">Recruiter</option>
+
+                                                </select>
+                                            </div>
 
 
-                                            </form>
+                                        </form>
 
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-outline-primary"
-                                                data-bs-dismiss="modal">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
 
-                                                <i class="card-icon" data-feather="x"></i>
+                                            <i class="card-icon" data-feather="x"></i>
 
-                                                Cancel
+                                            Cancel
 
-                                            </button>
-                                            <button type="button" class="btn btn-primary">
+                                        </button>
+                                        <button type="button" class="btn btn-primary">
 
-                                                <i class="card-icon" data-feather="plus"></i>
-                                                Create User
+                                            <i class="card-icon" data-feather="plus"></i>
+                                            Create User
 
-                                            </button>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
-                    </ul>
+                    </div>
 
                 </div>
 
                 <div class="col-12 col-md-8">
-                    <div class="listing-header mb-3">
+
+                    <div class="listing-header">
 
                         <div class="container m-0">
 
                             <div class="row">
                                 <div class="col-12 col-md-7 p-0">
 
-                                    <div class="input-group mb-3">
+                                    <div class="input-group mb-md-3">
                                         <input type="text" class="form-control" placeholder="Search"
                                             aria-label="Recipient's username" aria-describedby="button-addon2">
                                         <button class="btn btn-outline-light" type="button" id="button-addon2">
@@ -256,7 +256,7 @@
 
                                 </div>
 
-                                <div class="col-12 col-md-5 p-0">
+                                <div class="col-12 col-md-5 p-0 mb-3">
 
                                     <div class="batch-actions">
                                         <button class="btn btn-link">Clear Selection</button>
@@ -326,8 +326,8 @@
                                     <ul class="dropdown-menu">
 
                                         <li><a class="dropdown-item" href="#">Edit</a></li>
-                                        <li><a class="dropdown-item" href="#">Change to regular Admin</a></li>
                                         <li><a class="dropdown-item" href="#">Downgrade to Recruiter</a></li>
+                                        <li><a class="dropdown-item" href="#">Change to regular Admin</a></li>
                                     </ul>
 
                                 </div>
@@ -362,11 +362,11 @@
 
                                     <li class="card-item">
                                         <i class="card-icon" data-feather="mail"></i>
-                                        <p class="card-text">cgallego@itcrowdarg.com</p>
+                                        <p class="card-text"> <small>cgallego@itcrowdarg.com</small></p>
                                     </li>
                                     <li class="card-item">
                                         <i class="card-icon" data-feather="phone"></i>
-                                        <p class="card-text">+541166543356</p>
+                                        <p class="card-text"><small>+541166543356</small></p>
                                     </li>
                                 </ul>
 
@@ -425,11 +425,11 @@
 
                                     <li class="card-item">
                                         <i class="card-icon" data-feather="mail"></i>
-                                        <p class="card-text">losherovsky@itcrowdarg.com</p>
+                                        <p class="card-text"><small>losherovsky@itcrowdarg.com</small></p>
                                     </li>
                                     <li class="card-item">
                                         <i class="card-icon" data-feather="phone"></i>
-                                        <p class="card-text">+541166543356</p>
+                                        <p class="card-text"><small>+541166543356</small></p>
                                     </li>
                                 </ul>
 
@@ -483,11 +483,11 @@
 
                                     <li class="card-item">
                                         <i class="card-icon" data-feather="mail"></i>
-                                        <p class="card-text">losherovsky@itcrowdarg.com</p>
+                                        <p class="card-text"><small>losherovsky@itcrowdarg.com</small></p>
                                     </li>
                                     <li class="card-item">
                                         <i class="card-icon" data-feather="phone"></i>
-                                        <p class="card-text">+541166543356</p>
+                                        <p class="card-text"><small>+541166543356</small></p>
                                     </li>
                                 </ul>
 
@@ -534,11 +534,19 @@
                             </li>
                         </ul>
 
+                    </div>
 
+                    <div class="mobile">
 
-
+                        <div class="batch-actions">
+                            <button class="btn btn-link">Clear Selection</button>
+                            <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#batch-confirmation-modal">Delete
+                                Selection</button>
+                        </div>
 
                     </div>
+
                 </div>
             </div>
 
