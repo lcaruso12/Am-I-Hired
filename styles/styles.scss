@@ -21,9 +21,24 @@ a {
 /*=================================================================================================
 Nav
 =================================================================================================*/
+
 header {
     background-color: white;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    .first-row{
+        padding: .25rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .profile{
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        
+    }
 }
 
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active{
@@ -44,8 +59,6 @@ header {
 /*=================================================================================================
 Page Header
 =================================================================================================*/
-
-
 
 .page-header {
     padding: 1rem 0;
@@ -93,8 +106,6 @@ Page Header
     
 }
 
-
-
 /*=================================================================================================
 Cards
 =================================================================================================*/
@@ -102,7 +113,7 @@ Cards
 .card{
     background-color: white;
     border-radius: 0.5rem;
-    border: none;
+    border: solid 1px transparent;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
     width: 100%;
 
@@ -152,12 +163,11 @@ Cards
     .card-icon {
         width: 1.25rem;
         height: 1.25rem;
-
         flex-shrink: 0;
     }
     .list-group-icon {
 
-        .list-group-item {
+        .card-item {
             padding: 0;
             border: none;
             border-radius: 0;
@@ -236,8 +246,8 @@ Cards
         }
 
         &.selected{
-            border: solid 3px #79D3A9;
-        
+            background-color: var(--bs-primary-bg-subtle);
+            border: solid 1px #79D3A9;
         }
 
         .actions {
@@ -253,42 +263,81 @@ Cards
                 top: 1rem;
                 left: 1rem;
             }
-        .btn{
-                padding: .25rem;
-                border: none;
-                color: black;
-            }
+        
 
     }
 
     &.card-users {
         display: flex;
         flex-direction: row;
-            padding: 0 1rem 0 0;
+        padding: 0 1rem 0 0;
+        .card-body {
+        gap: .25rem;
+        }
+        .avatar-container{
+            flex-shrink: 0;
+            width: 3.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1.5rem;
+            .avatar{
+                width:100%;
+                height: 3.5rem;
+                border-radius: 15rem;
+                h3{
+                    margin: 0;
+                    color: #CA6510;
+                }
+            }
+        }
+        
+        .list-group {
+            
+            
+
+            .list-group-item {
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                display: flex;
+                gap: .5rem;
+                overflow: hidden;
+            }
+        }
+
+        &.selected{
+            background-color: var(--bs-primary-bg-subtle);
+            border: solid 1px #79D3A9;
+        }
+
+        .actions {
+                position: absolute;
+                display: flex;
+                gap: .5rem;
+                top: 1rem;
+                right: 1rem;
+            }
+
+        .form-check-input {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+            }
+        
+
+        }
+
+    &.card-templates{
+            padding: 0 2rem;
             .card-body {
             gap: .25rem;
             }
-            .avatar-container{
-                flex-shrink: 0;
-                width: 3.5rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 1.5rem;
-                .avatar{
-                    width:100%;
-                    height: 3.5rem;
-                    border-radius: 15rem;
-                    h3{
-                        margin: 0;
-                        color: #CA6510;
-                    }
-                }
-            }
             
             .list-group {
-                
-                
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
 
                 .list-group-item {
                     padding: 0;
@@ -301,8 +350,8 @@ Cards
             }
 
             &.selected{
-                border: solid 3px #79D3A9;
-            
+                background-color: var(--bs-primary-bg-subtle);
+                border: solid 1px #79D3A9;
             }
 
             .actions {
@@ -318,15 +367,9 @@ Cards
                     top: 1rem;
                     left: 1rem;
                 }
-            .btn{
-                    padding: .25rem;
-                    border: none;
-                    color: black;
-                }
+            
 
         }
-
-
 
 
     &.card-chat{
@@ -441,8 +484,6 @@ avatar
                 }
     }
 
-
-
 /*=================================================================================================
 dropdown
 =================================================================================================*/
@@ -451,9 +492,8 @@ dropdown
     display: flex;
     align-items: center;
     gap: .5rem;
- 
-   
 }
+
 /*=================================================================================================
 Paginator
 =================================================================================================*/
@@ -464,38 +504,48 @@ Paginator
         justify-content: end;
     }
 
-    
-
 /*=================================================================================================
 button
 =================================================================================================*/
 
 .btn{
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .25rem;
+    gap: .5rem;
+
+    i{
+            color: inherit;
+    }
+
+    .btn-icon{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
 
     &.btn-primary{
          --bs-btn-color: var(--bs-white);
          --bs-btn-hover-color:var(--bs-white);
     }
-
+   
     &.btn-outline-danger{
+        
         --bs-btn-hover-color:var(--bs-white);
-        i{
-            color: inherit;
-        }
+
      }
 
-     &.btn-outline-primary{
+    &.btn-outline-primary{
           --bs-btn-hover-color:var(--bs-white);
      }
 
+}
 
-
-   
+.icon-button{
+    border: none !important;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 /*=================================================================================================
@@ -542,19 +592,19 @@ badge
     background: var(--ghost-grey);
 }
 
+.badge-ghost-danger{
+    color: var(--ghost-danger-text);
+    background:var(--ghost-danger);
+}
+
 .badge-ghost-closed{
     color: var(--ghost-grey-text);
     border: 2px solid var(--ghost-grey-text);
 }
 
-
-
-
-
 /*=================================================================================================
 Home
 =================================================================================================*/
-
 
 .home {
     padding: 1.5rem 0rem;
@@ -565,12 +615,11 @@ Home
     margin-top: 1.5rem;
 }
 
-
 /*=================================================================================================
-Jobs
+Listing layout
 =================================================================================================*/
-.jobs{
-.jobs-header{
+
+.listing-header{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -582,8 +631,9 @@ Jobs
         justify-content: end;
         align-items: center;
         height: fit-content;
-        width: fit-content;
+        width: 100%;
         gap: .5rem;
+        margin: 0;
         .btn{
             width: 153px;
         }
@@ -593,14 +643,12 @@ Jobs
         width: 100%;
     }
 }
-    .jobs-body {
+
+.listing-body {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
-
-}
-
 
 /*=================================================================================================
 Jobs/Details
@@ -713,7 +761,6 @@ Jobs/Details
     
     }
 }
-
 
 /*=================================================================================================
 Messages
@@ -867,6 +914,7 @@ Messages
 /*=================================================================================================
 My Organization
 =================================================================================================*/ 
+
 .my-organization{
     .organization-records{
         .card-header{
@@ -912,45 +960,6 @@ My Organization
                     }
             }
         }
-    }
-
-}
-
-
-
-/*=================================================================================================
-Users
-=================================================================================================*/ 
-
-
-.users{
-.users-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    .batch-actions{
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        align-items: center;
-        height: fit-content;
-        width: fit-content;
-        gap: .5rem;
-        .btn{
-            width: 153px;
-        }
-    }
-    
-    .input-group{
-        width: 100%;
-    }
-}
-    .users-body {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
     }
 
 }

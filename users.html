@@ -23,9 +23,9 @@
     <!-- Header-->
     <header>
 
-        <div class="container ">
-            <div class="row align-items-center py-1">
-                <!-- Responsive nav
+        <div class="container first-row">
+
+            <!-- Responsive nav
 
             <nav class=" responsiveNav col-2 col-md-4 navbar navbar-expand-lg bg-body-tertiary ">
                 <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -59,41 +59,43 @@
                 </div>
                 </nav>
                 -->
-                <div class="col-5 col-md-9 ">
 
-                    <div class="organizationLogo">
-                        <img src="Resources/img/Logo.svg" alt="">
-                    </div>
-
-                </div>
-
-                <div class="col-5 col-md-3 p-0">
-
-                    <div class="dropdown profile-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Lucas Osherovsky </a>
-
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#">
-                                    <i data-feather="user"></i>
-                                    Profile
-                                </a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#">
-                                    <i data-feather="log-out"></i>
-                                    Log Out
-                                </a>
-                            </li>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
+            <div class="organizationLogo">
+                <img src="Resources/img/Logo.svg" alt="">
             </div>
+
+            <div class="profile">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <p>LO</p>
+                    </div>
+                </div>
+                <div class="dropdown profile-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Lucas Osherovsky </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <i data-feather="user"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <i data-feather="log-out"></i>
+                                Log Out
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
         </div>
 
         <nav class="navigation">
@@ -122,7 +124,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link">Templates</a>
+                                <a class="nav-link" href="template-messages.html">Templates</a>
                             </li>
                         </ul>
                     </div>
@@ -154,7 +156,7 @@
 
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#candidate-modal">
-                                <i class="card-icon" data-feather="user-plus"></i>
+                                <i class="btn-icon" data-feather="user-plus"></i>
                                 New User
                             </button>
 
@@ -237,23 +239,41 @@
                 </div>
 
                 <div class="col-12 col-md-8">
-                    <div class="users-header mb-3">
+                    <div class="listing-header mb-3">
 
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search Job" aria-label="Search"
-                                aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary " type="button" id="button-addon2">
-                                Search</button>
-                        </div>
-                        <div class="batch-actions">
-                            <button class="btn btn-outline-primary">Clear Selection</button>
-                            <button class="btn btn-outline-danger" data-bs-toggle="modal"
-                                data-bs-target="#batch-confirmation-modal">Delete Selection</button>
+                        <div class="container m-0">
+
+                            <div class="row">
+                                <div class="col-12 col-md-7 p-0">
+
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Search"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-outline-light" type="button" id="button-addon2">
+                                            <i class="btn-icon text-dark" data-feather="search"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 col-md-5 p-0">
+
+                                    <div class="batch-actions">
+                                        <button class="btn btn-link">Clear Selection</button>
+                                        <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                            data-bs-target="#batch-confirmation-modal">Delete Selection</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                    <div class="users-body">
+                    <div class="listing-body">
 
 
                         <div class="card card-users">
@@ -268,7 +288,7 @@
                                 </div>
                             </div>
 
-                            <div href="jobs-details.html" class="card-body">
+                            <div class="card-body">
 
 
 
@@ -279,11 +299,11 @@
                                 </h5>
                                 <ul class="list-group list-group-icon">
 
-                                    <li class="list-group-item">
+                                    <li class="card-item">
                                         <i class="card-icon" data-feather="mail"></i>
                                         <p class="card-text"><small>losherovsky@itcrowdarg.com</small></p>
                                     </li>
-                                    <li class="list-group-item">
+                                    <li class="card-item">
                                         <i class="card-icon" data-feather="phone"></i>
                                         <p class="card-text"><small>+541166543356</small></p>
                                     </li>
@@ -291,7 +311,7 @@
 
                             </div>
                             <div class="actions">
-                                <a class="btn btn-outline-danger" data-bs-toggle="modal"
+                                <a class="btn btn-outline-danger icon-button" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
                                     <i class="card-icon" data-feather="trash-2"></i>
                                 </a>
@@ -299,19 +319,15 @@
                                 </button>
                                 <div class="dropdown contextual-menu">
 
-                                    <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
+                                    <a class="btn btn-outline-light icon-button" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="card-icon" data-feather="more-vertical"></i>
                                     </a>
                                     <ul class="dropdown-menu">
 
-
-                                        <li><a class="dropdown-item" href="#">Change to <span
-                                                    class="text-primary">Active</span></a></li>
-                                        <li><a class="dropdown-item" href="#">Change to Archive</a>
-                                        <li><a class="dropdown-item" href="#">Change to Closed</a>
-                                        </li>
-
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Change to regular Admin</a></li>
+                                        <li><a class="dropdown-item" href="#">Downgrade to Recruiter</a></li>
                                     </ul>
 
                                 </div>
@@ -344,19 +360,19 @@
                                 </h5>
                                 <ul class="list-group list-group-icon">
 
-                                    <li class="list-group-item">
+                                    <li class="card-item">
                                         <i class="card-icon" data-feather="mail"></i>
-                                        <p class="card-text"><small>cgallego@itcrowdarg.com</small></p>
+                                        <p class="card-text">cgallego@itcrowdarg.com</p>
                                     </li>
-                                    <li class="list-group-item">
+                                    <li class="card-item">
                                         <i class="card-icon" data-feather="phone"></i>
-                                        <p class="card-text"><small>+541166543356</small></p>
+                                        <p class="card-text">+541166543356</p>
                                     </li>
                                 </ul>
 
                             </div>
                             <div class="actions">
-                                <a class="btn btn-outline-danger" data-bs-toggle="modal"
+                                <a class="btn btn-outline-danger icon-button" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
                                     <i class="card-icon" data-feather="trash-2"></i>
                                 </a>
@@ -364,18 +380,16 @@
                                 </button>
                                 <div class="dropdown contextual-menu">
 
-                                    <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
+                                    <a class="btn btn-outline-light icon-button" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="card-icon" data-feather="more-vertical"></i>
                                     </a>
                                     <ul class="dropdown-menu">
 
-
-                                        <li><a class="dropdown-item" href="#">Change to <span
-                                                    class="text-primary">Active</span></a></li>
-                                        <li><a class="dropdown-item" href="#">Change to Archive</a>
-                                        <li><a class="dropdown-item" href="#">Change to Closed</a>
-                                        </li>
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Downgrade to Recruiter</a></li>
+                                        <li><a class="dropdown-item" href="#">Change to <span class="text-warning">Main
+                                                    Admin</span></a></li>
 
                                     </ul>
 
@@ -409,19 +423,19 @@
                                 </h5>
                                 <ul class="list-group list-group-icon">
 
-                                    <li class="list-group-item">
+                                    <li class="card-item">
                                         <i class="card-icon" data-feather="mail"></i>
-                                        <p class="card-text"><small>losherovsky@itcrowdarg.com</small></p>
+                                        <p class="card-text">losherovsky@itcrowdarg.com</p>
                                     </li>
-                                    <li class="list-group-item">
+                                    <li class="card-item">
                                         <i class="card-icon" data-feather="phone"></i>
-                                        <p class="card-text"><small>+541166543356</small></p>
+                                        <p class="card-text">+541166543356</p>
                                     </li>
                                 </ul>
 
                             </div>
                             <div class="actions">
-                                <a class="btn btn-outline-danger" data-bs-toggle="modal"
+                                <a class="btn btn-outline-danger icon-button" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
                                     <i class="card-icon" data-feather="trash-2"></i>
                                 </a>
@@ -429,19 +443,13 @@
                                 </button>
                                 <div class="dropdown contextual-menu">
 
-                                    <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
+                                    <a class="btn btn-outline-light icon-button" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="card-icon" data-feather="more-vertical"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-
-
-                                        <li><a class="dropdown-item" href="#">Change to <span
-                                                    class="text-primary">Active</span></a></li>
-                                        <li><a class="dropdown-item" href="#">Change to Archive</a>
-                                        <li><a class="dropdown-item" href="#">Change to Closed</a>
-                                        </li>
-
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Upgrade to Admin</a></li>
                                     </ul>
 
                                 </div>
@@ -473,19 +481,19 @@
                                 </h5>
                                 <ul class="list-group list-group-icon">
 
-                                    <li class="list-group-item">
+                                    <li class="card-item">
                                         <i class="card-icon" data-feather="mail"></i>
-                                        <p class="card-text"><small>losherovsky@itcrowdarg.com</small></p>
+                                        <p class="card-text">losherovsky@itcrowdarg.com</p>
                                     </li>
-                                    <li class="list-group-item">
+                                    <li class="card-item">
                                         <i class="card-icon" data-feather="phone"></i>
-                                        <p class="card-text"><small>+541166543356</small></p>
+                                        <p class="card-text">+541166543356</p>
                                     </li>
                                 </ul>
 
                             </div>
                             <div class="actions">
-                                <a class="btn btn-outline-danger" data-bs-toggle="modal"
+                                <a class="btn btn-outline-danger icon-button" data-bs-toggle="modal"
                                     data-bs-target="#confirmation-modal">
                                     <i class="card-icon" data-feather="trash-2"></i>
                                 </a>
@@ -493,19 +501,13 @@
                                 </button>
                                 <div class="dropdown contextual-menu">
 
-                                    <a class="btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
+                                    <a class="btn btn-outline-light icon-button" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="card-icon" data-feather="more-vertical"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-
-
-                                        <li><a class="dropdown-item" href="#">Change to <span
-                                                    class="text-primary">Active</span></a></li>
-                                        <li><a class="dropdown-item" href="#">Change to Archive</a>
-                                        <li><a class="dropdown-item" href="#">Change to Closed</a>
-                                        </li>
-
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Upgrade to Admin</a></li>
                                     </ul>
 
                                 </div>
@@ -546,11 +548,11 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Opening</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete User</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Are you sure you want to delete <span> <b>Job Position</b></span>?
+                            Are you sure you want to delete <span> <b>User Name</b></span>?
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
@@ -577,11 +579,11 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Opening</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Users</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Are you sure you want to delete these <span> <b>x amount positions</b></span>?
+                            Are you sure you want to delete these <span> <b> x Users</b></span>?
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">

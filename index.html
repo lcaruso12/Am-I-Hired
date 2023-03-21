@@ -24,9 +24,9 @@
     <!-- Header-->
     <header>
 
-        <div class="container">
-            <div class="row align-items-center py-1">
-                <!-- Responsive nav
+        <div class="container first-row">
+
+            <!-- Responsive nav
 
             <nav class=" responsiveNav col-2 col-md-4 navbar navbar-expand-lg bg-body-tertiary ">
                 <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -60,41 +60,43 @@
                 </div>
                 </nav>
                 -->
-                <div class="col-5 col-md-9">
 
-                    <div class="organizationLogo">
-                        <img src="Resources/img/Logo.svg" alt="">
-                    </div>
-
-                </div>
-
-                <div class="col-5 col-md-3">
-
-                    <div class="dropdown profile-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Lucas Osherovsky </a>
-
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#">
-                                    <i data-feather="user"></i>
-                                    Profile
-                                </a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#">
-                                    <i data-feather="log-out"></i>
-                                    Log Out
-                                </a>
-                            </li>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
+            <div class="organizationLogo">
+                <img src="Resources/img/Logo.svg" alt="">
             </div>
+
+            <div class="profile">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <p>LO</p>
+                    </div>
+                </div>
+                <div class="dropdown profile-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Lucas Osherovsky </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <i data-feather="user"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <i data-feather="log-out"></i>
+                                Log Out
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
         </div>
 
         <div class="navigation">
@@ -123,7 +125,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link">Templates</a>
+                                <a class="nav-link" href="template-messages.html">Templates</a>
                             </li>
                         </ul>
                     </div>
@@ -232,7 +234,7 @@
                                     <h5 class="card-title">Candidate</h5>
                                     <div class="dropdown contextual-menu">
 
-                                        <a class="btn btn-outline-primary" href="#" role="button"
+                                        <a class="btn btn-outline-light icon-button" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="card-icon" data-feather="more-vertical"></i>
                                         </a>
@@ -251,12 +253,12 @@
                                 <div class="card-body">
                                     <ul class="list-group list-group-icon">
 
-                                        <li class="list-group-item">
+                                        <li class="card-item">
                                             <i class="card-icon" data-feather="mail"></i>
                                             <p class="card-text">candidate@gmail.com</p>
                                         </li>
 
-                                        <li class="list-group-item">
+                                        <li class="card-item">
                                             <i class="card-icon text-primary" data-feather="zap"></i>
                                             <p class="card-text">18hr</p>
                                         </li>
@@ -271,7 +273,7 @@
                                     <h5 class="card-title">Candidate</h5>
                                     <div class="dropdown contextual-menu">
 
-                                        <a class="btn btn-outline-primary" href="#" role="button"
+                                        <a class="btn btn-outline-light icon-button" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="card-icon" data-feather="more-vertical"></i>
                                         </a>
@@ -290,12 +292,12 @@
                                 <div class="card-body">
                                     <ul class="list-group list-group-icon">
 
-                                        <li class="list-group-item">
+                                        <li class="card-item">
                                             <i class="card-icon" data-feather="mail"></i>
-                                            <p class="card-text">candidate@</p>
+                                            <p class="card-text">candidate@gmail.com</p>
                                         </li>
 
-                                        <li class="list-group-item">
+                                        <li class="card-item">
                                             <i class="card-icon text-primary" data-feather="zap"></i>
                                             <p class="card-text">1 day</p>
                                         </li>
@@ -310,7 +312,7 @@
                                     <h5 class="card-title">Candidate</h5>
                                     <div class="dropdown contextual-menu">
 
-                                        <a class="btn btn-outline-primary" href="#" role="button"
+                                        <a class="btn btn-outline-light icon-button" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="card-icon" data-feather="more-vertical"></i>
                                         </a>
@@ -329,12 +331,12 @@
                                 <div class="card-body">
                                     <ul class="list-group list-group-icon">
 
-                                        <li class="list-group-item">
+                                        <li class="card-item">
                                             <i class="card-icon" data-feather="mail"></i>
                                             <p class="card-text">candidate@gmail.com</p>
                                         </li>
 
-                                        <li class="list-group-item">
+                                        <li class="card-item">
                                             <i class="card-icon text-warning" data-feather="zap"></i>
                                             <p class="card-text">2 days</p>
                                         </li>
@@ -343,13 +345,13 @@
                                 </div>
                             </div>
 
-                            <div class="card candidate">
+                            <div class="card">
 
                                 <div class="card-header">
                                     <h5 class="card-title">Candidate</h5>
                                     <div class="dropdown contextual-menu">
 
-                                        <a class="btn btn-outline-primary" href="#" role="button"
+                                        <a class="btn btn-outline-light icon-button" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="card-icon" data-feather="more-vertical"></i>
                                         </a>
@@ -368,12 +370,12 @@
                                 <div class="card-body">
                                     <ul class="list-group list-group-icon">
 
-                                        <li class="list-group-item">
+                                        <li class="card-item">
                                             <i class="card-icon" data-feather="mail"></i>
                                             <p class="card-text">candidate@gmail.com</p>
                                         </li>
 
-                                        <li class="list-group-item">
+                                        <li class="card-item">
                                             <i class="card-icon text-danger" data-feather="zap"></i>
                                             <p class="card-text">5 days</p>
                                         </li>
