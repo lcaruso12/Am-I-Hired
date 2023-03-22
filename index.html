@@ -26,40 +26,15 @@
 
         <div class="container first-row">
 
-            <!-- Responsive nav
-
-            <nav class=" responsiveNav col-2 col-md-4 navbar navbar-expand-lg bg-body-tertiary ">
-                <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i data-feather="menu"></i> </span>
-                </button>
-            
-              
-                <div class="navBody collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Jobs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Messages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Organizations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Users</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link">Templates</a>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Responsive nav-->
+            <div class="mobile-nav-toggler">
+                <nav class="row navbar navbar-expand-lg align-items-center p-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i data-feather="menu"></i> </span>
+                    </button>
                 </nav>
-                -->
+            </div>
 
             <div class="organizationLogo">
                 <img src="Resources/img/Logo.svg" alt="">
@@ -72,8 +47,8 @@
                     </div>
                 </div>
                 <div class="dropdown profile-dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false"
+                        data-bs-toggle="dropdown">
                         Lucas Osherovsky </a>
 
                     <ul class="dropdown-menu">
@@ -94,9 +69,32 @@
                 </div>
             </div>
 
+        </div>
 
+        <div class="mobile-nav-menu">
+            <div class="navBody collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jobs.html">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="messages.html">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="my-organization.html">My Organization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="users.html">Users</a>
+                    </li>
 
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="template-messages.html">Templates</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="navigation">
@@ -147,7 +145,7 @@
 
             <div class="row gy-3">
 
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-xl-6 col-xxl-3">
 
                     <div class="card card-overview">
 
@@ -164,7 +162,7 @@
 
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-xl-6 col-xxl-3">
 
                     <div class="card card-overview">
 
@@ -180,7 +178,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-xl-6 col-xxl-3">
 
                     <div class="card card-overview ">
 
@@ -194,7 +192,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-xl-6 col-xxl-3">
 
                     <div class="card card-overview">
 
@@ -214,9 +212,9 @@
 
             <!-- Row 2 | Body -->
 
-            <div class="row gy-3 gy-lg-0">
+            <div class="row gy-3 gy-xl-3 ">
                 <!-- Col 1 | Action Required -->
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-xl-4">
                     <div class="card">
                         <h4 class="card-header">Action Required</h4>
 
@@ -388,7 +386,7 @@
                     </div>
                 </div>
                 <!-- Col 2 | Latest Jobs -->
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-xl-8">
 
                     <div class="card">
 

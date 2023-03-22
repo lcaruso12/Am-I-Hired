@@ -37,6 +37,10 @@ header {
             gap: .5rem;
         }
 
+        .mobile-nav-toggler{
+            display: none;
+        }
+
         
     }
 }
@@ -45,16 +49,54 @@ header {
         border-bottom: 2px solid var(--bs-primary);
         color: var(--bs-primary);
     }
-    
-    .navigation {
-        border-top: 1px solid #E0E6E6;
+        
+.navigation {
+    border-top: 1px solid #E0E6E6;
+}
+
+.navigation .navbar,
+.navBody {
+    padding: 0;
+    margin: 0;
+}
+
+@media(max-width:600px){
+    header{
+        .first-row{
+            padding:.5rem;
+            width: 100%;
+            .profile{
+                .profile-dropdown{
+                a{ 
+                    display: none;
+                }
+                }
+
+            }
+            .mobile-nav-toggler{
+                display: block;
+                width: fit-content;
+                margin-left: .75rem;
+               
+            }
+            
+        }
+        .navigation{
+                display: none;
+            } 
+        .mobile-nav-menu{
+            .navbar-nav{
+                padding: 0 1rem;
+            }    
+        }
+        
     }
-    
-    .navigation .navbar,
-    .navBody {
-        padding: 0;
-        margin: 0;
+
+    .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active{
+        border: none;
+        color: var(--bs-primary);
     }
+}
     
 /*=================================================================================================
 Listing layout
@@ -113,7 +155,7 @@ Listing layout
     }
 }
 
-@media(max-width: 400px){
+@media(max-width: 500px){
 
     .mobile{
         visibility:visible;
@@ -579,11 +621,11 @@ dropdown
 Paginator
 =================================================================================================*/
 
-    .pagination{
+.pagination{
 
-        display: flex;
-        justify-content: end;
-    }
+    display: flex;
+    justify-content: end;
+}
 
 /*=================================================================================================
 button
@@ -988,7 +1030,8 @@ My Organization
        }
         }
         .organization-admin{
-            border-left: 1px solid var(--bs-gray-400);
+            height: 100%;
+            
                 .avatar-container{
                     width: 100%;
                     display: flex;
@@ -1005,7 +1048,7 @@ My Organization
                         width: 8.25rem;
                         border-radius: 9rem;
                     }
-            }
+                }
         }
     }
 
