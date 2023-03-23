@@ -18,7 +18,7 @@ a {
 }
 
 /*=================================================================================================
-Nav
+TopNav
 =================================================================================================*/
 header {
   background-color: white;
@@ -60,7 +60,7 @@ header .first-row .mobile-nav-toggler {
     padding: 0.5rem;
     width: 100%;
   }
-  header .first-row .profile .profile-dropdown a {
+  header .first-row .profile-dropdown .user-name {
     display: none;
   }
   header .first-row .mobile-nav-toggler {
@@ -196,14 +196,7 @@ Cards
 =================================================================================================*/
 .card {
   background-color: white;
-  border-radius: 0.5rem;
-  border: solid 1px transparent;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
   width: 100%;
-}
-.card .card {
-  box-shadow: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .card .card-header {
   padding-bottom: 0;
@@ -301,10 +294,6 @@ Cards
   gap: 0.5rem;
   overflow: hidden;
 }
-.card.card-jobs.selected {
-  background-color: var(--bs-primary-bg-subtle);
-  border: solid 1px #79D3A9;
-}
 .card.card-jobs .actions {
   position: absolute;
   display: flex;
@@ -352,10 +341,6 @@ Cards
   gap: 0.5rem;
   overflow: hidden;
 }
-.card.card-users.selected {
-  background-color: var(--bs-primary-bg-subtle);
-  border: solid 1px #79D3A9;
-}
 .card.card-users .actions {
   position: absolute;
   display: flex;
@@ -386,10 +371,6 @@ Cards
   display: flex;
   gap: 0.5rem;
   overflow: hidden;
-}
-.card.card-templates.selected {
-  background-color: var(--bs-primary-bg-subtle);
-  border: solid 1px #79D3A9;
 }
 .card.card-templates .actions {
   position: absolute;
@@ -442,11 +423,6 @@ Cards
 .card.card-chat .card-body .message-info .time {
   width: -moz-fit-content;
   width: fit-content;
-}
-.card.card-chat.selected {
-  border: none;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
-  background: var(--bs-primary);
 }
 .card.card-chat.selected .card-header {
   color: var(--bs-white);
@@ -655,23 +631,10 @@ Jobs/Details
   overflow: hidden;
   height: 100%;
 }
-.job-description .description-body .job-pipeline .card-body .pipeline-step .step-list .candidate {
-  background: var(--bs-white);
-  border-radius: 0.5rem;
-  border: none;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
-  width: 100%;
-}
 .job-description .description-body .job-pipeline .card-body .pipeline-step .step-list .candidate .card-body {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
-}
-.job-description .description-body .job-pipeline .card-body .disqualified {
-  border-color: var(--bs-red);
-}
-.job-description .description-body .job-pipeline .card-body .hired {
-  border-color: var(--bs-primary);
 }
 
 /*=================================================================================================
