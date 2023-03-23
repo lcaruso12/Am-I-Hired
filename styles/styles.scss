@@ -60,7 +60,7 @@ header {
     margin: 0;
 }
 
-@media(max-width:600px){
+@media(max-width:770px){
     header{
         .first-row{
             padding:.5rem;
@@ -856,6 +856,9 @@ Messages
 =================================================================================================*/ 
     
 .messages{
+    .card{
+        border: none;
+    }
    .message-section{
     overflow: hidden;
    }
@@ -887,6 +890,7 @@ Messages
         align-items:start;
         gap: 2rem;
         padding: 1rem;
+        width:100%;
         .card-body{
             padding: 0;
             .list-group-icon{
@@ -922,12 +926,26 @@ Messages
         display: flex;
         flex-direction: column;
 
+        .messenger-header{
+                padding: .5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+                background: var(--bs-gray-200);
+                border-bottom: 1px solid var(--bs-gray-400);
+                p{
+                    margin:0;
+                }
+            }
+
         .messenger-body{
             padding: 1rem 1rem 0 1rem;
             height: 100%;
             display: flex;
             flex-direction: column;
             gap: 2rem;
+            
             .date{
                 display: flex;
                 flex: row;
@@ -998,6 +1016,45 @@ Messages
 
        
     
+}
+@media(min-width: 995px){
+
+.messenger-header{
+    visibility:hidden;
+}
+
+}
+
+
+@media(max-width: 995px){
+
+.candidate-info{
+    display: none;
+}
+}
+
+@media(max-width: 450px){
+    .messages{
+        
+        
+        .candidates-chats{
+            border-right: none;
+        }
+
+        .messenger{
+            .messenger-body{
+                height: 680px;
+            }
+        }
+
+        .messenger-candidates{
+            display: none;
+            height: 100%;
+        }
+
+    }
+
+
 }
    
 /*=================================================================================================
