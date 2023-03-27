@@ -11,11 +11,16 @@ $link-decoration:none;
 $nav-pills-link-active-color: #115F45;
 $nav-pills-link-active-bg: #87F7B2;
 
+
+
 $badge-border-radius:2rem;
 
 $btn-link-color:#181818;
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
 // Then add additional custom code here
+
+$nav-link-active:#20B670;

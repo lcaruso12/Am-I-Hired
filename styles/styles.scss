@@ -25,7 +25,9 @@ TopNav
 header {
     background-color: white;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    
     .first-row{
+        
         padding: .25rem 0;
         display: flex;
         flex-direction: row;
@@ -50,7 +52,13 @@ header {
         color: var(--bs-primary);
         
     }
-        
+    
+.nav-pills{
+    .nav-link{
+        width: fit-content;
+    }
+}
+    
 .navigation {
     border-top: 1px solid #E0E6E6;
 }
@@ -94,8 +102,10 @@ header {
     }
 
     .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active{
-        border: none;
+        border-bottom: none;
         color: var(--bs-primary);
+        
+        
         
     }
 }
@@ -171,6 +181,9 @@ Listing layout
             display: none;
         }
         
+    }
+    .listing-body{
+        padding-bottom: 6rem;
     }
     #mobile{
     margin: 0;
@@ -280,7 +293,7 @@ Cards
         flex-direction: column;
         gap: 0.5rem;
         .card-title{
-            width: 60%;
+            width: 80%;
             overflow: hidden;
             margin: 0;
         }
@@ -289,6 +302,7 @@ Cards
     .card-text {
         width: 100%;
     }
+
 
     .card-icon {
         width: 1.25rem;
@@ -620,7 +634,7 @@ button
     gap: .5rem;
 
     i{
-            color: inherit;
+        color: inherit;
     }
 
     .btn-icon{
@@ -824,9 +838,7 @@ Messages
 =================================================================================================*/ 
     
 .messages{
-    .card{
-        border: none;
-    }
+   
    .message-section{
     overflow: hidden;
    }
@@ -847,6 +859,10 @@ Messages
             align-items:start;
             padding: 1rem;
             gap: .5rem;
+        }
+
+        .chat-body-mobile{
+            visibility: hidden
         }
 
     }
@@ -1004,21 +1020,61 @@ Messages
 @media(max-width: 450px){
     .messages{
         
-        
         .candidates-chats{
             border-right: none;
-        }
 
-        .messenger{
-            .messenger-body{
-                height: 680px;
+            .chat-body{
+                display: none;
+            }
+
+            .chat-body-mobile{
+                visibility: visible;
+                display:flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items:start;
+                gap: .5rem;
+            }
+            
+            .offcanvas{
+                &.offcanvas-start{
+                    width: 100%;
+                }
+                .offcanvas-body{
+                    .messenger{
+                        .messenger-body{
+                            height: 100%;
+                        }
+                    }
+
+                }
             }
         }
 
-        .messenger-candidates{
-            display: none;
-            height: 100%;
+        .messenger{
+
+            .messenger-body{
+                height: 680px;
+            }
+                       
         }
+
+        .message-section{
+            .messenger-candidates{
+                height: 800px;
+                overflow: hidden;
+                .chat-body{
+                    overflow-y: scroll;
+                }
+            }
+        }
+
+        .messenger-chat{
+            display: none;
+        
+        }
+
+
 
     }
 

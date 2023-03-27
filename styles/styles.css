@@ -45,6 +45,11 @@ header .first-row .mobile-nav-toggler {
   color: var(--bs-primary);
 }
 
+.nav-pills .nav-link {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .navigation {
   border-top: 1px solid #E0E6E6;
 }
@@ -76,7 +81,7 @@ header .first-row .mobile-nav-toggler {
     padding: 0 1rem;
   }
   .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
-    border: none;
+    border-bottom: none;
     color: var(--bs-primary);
   }
 }
@@ -141,6 +146,9 @@ Listing layout
   }
   .listing-header .batch-actions {
     display: none;
+  }
+  .listing-body {
+    padding-bottom: 6rem;
   }
   #mobile {
     margin: 0;
@@ -221,7 +229,7 @@ Cards
   gap: 0.5rem;
 }
 .card .card-body .card-title {
-  width: 60%;
+  width: 80%;
   overflow: hidden;
   margin: 0;
 }
@@ -640,9 +648,6 @@ Jobs/Details
 /*=================================================================================================
 Messages
 =================================================================================================*/
-.messages .card {
-  border: none;
-}
 .messages .message-section {
   overflow: hidden;
 }
@@ -663,6 +668,9 @@ Messages
   align-items: start;
   padding: 1rem;
   gap: 0.5rem;
+}
+.messages .candidates-chats .chat-body-mobile {
+  visibility: hidden;
 }
 .messages .chat-info {
   display: flex;
@@ -799,12 +807,35 @@ Messages
   .messages .candidates-chats {
     border-right: none;
   }
+  .messages .candidates-chats .chat-body {
+    display: none;
+  }
+  .messages .candidates-chats .chat-body-mobile {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 0.5rem;
+  }
+  .messages .candidates-chats .offcanvas.offcanvas-start {
+    width: 100%;
+  }
+  .messages .candidates-chats .offcanvas .offcanvas-body .messenger .messenger-body {
+    height: 100%;
+  }
   .messages .messenger .messenger-body {
     height: 680px;
   }
-  .messages .messenger-candidates {
+  .messages .message-section .messenger-candidates {
+    height: 800px;
+    overflow: hidden;
+  }
+  .messages .message-section .messenger-candidates .chat-body {
+    overflow-y: scroll;
+  }
+  .messages .messenger-chat {
     display: none;
-    height: 100%;
   }
 }
 /*=================================================================================================
